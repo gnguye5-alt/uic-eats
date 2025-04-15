@@ -1,0 +1,122 @@
+/* 
+  This CSS file styles the View Post Group Order screen.
+  - White background for the entire application.
+  - .confirmation-container sets up the page to be vertically centered with flexbox.
+  - .order-boxes-wrapper organizes order boxes vertically into small boxes and then wraps them into rows on if on a larger screen
+  - .page-title and .alt-option-text style section headers 
+  - .back-button has the button "Back" at the top-left of the screen, allowing users to clicked then
+  - .post-box gives the "Post Group Order" button with border, shadow.
+  - .order-box gives each group order card a boxed, clickable design with padding and text wrapping.
+  - Uses media queries to adjust layout for screens wider than 768px.
+*/
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+}
+
+.back-button {
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.confirmation-container {
+    width: 100%;
+    min-height: 0vh;
+    background: white;
+    padding: 30px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto;
+  }
+  
+  .order-boxes-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .order-boxes-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* gap: 10px; */
+    }
+  }
+  
+  .back-button {
+    font-size: 20px !important;       
+    font-weight: 100;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .page-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  
+  .alt-option-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  .post-box {
+    padding: 15px;
+    /* margin-top: 10px; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 15px;
+    color: black;
+    white-space: nowrap; 
+  }
+
+
+.order-box {
+  cursor: pointer; 
+}
+
+
+.order-box {
+  width: 100%;
+  max-width: 320px;
+  padding: 15px 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  word-wrap: break-word;
+  word-break: break-word;
+  min-height: 120px;
+  height: auto;
+  overflow: hidden; 
+  box-sizing: border-box; 
+}
+
+
+

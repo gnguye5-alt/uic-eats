@@ -1,0 +1,32 @@
+/* 
+  This CSS file styles for the Order Status screen.
+  - Uses flexbox to center the text vertically and buttons horizontally, where the "Continue" button centered under the message
+*/
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+}
+
+.status-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.status-actions {
+  display: flex;
+  justify-content: center;
+}
+
+

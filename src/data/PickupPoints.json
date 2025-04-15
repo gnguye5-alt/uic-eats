@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Student Center East",
+    "address": "750 S. Halsted St, Chicago, IL 60607",
+    "lat": 41.8717,
+    "lng": -87.6471
+  },
+  {
+    "name": "Student Service Building",
+    "address": "1200 W. Harrison, Chicago, IL 60607",
+    "lat": 41.8745,
+    "lng": -87.6582
+  },
+  {
+    "name": "Thomas Beckham Hall",
+    "address": "1250 S. Halsted Street, Chicago, IL 60607",
+    "lat": 41.865657,
+    "lng": -87.647191
+  },
+  {
+    "name": "UIC Forum",
+    "address": "725 W. Roosevelt Rd, Chicago, IL 60608",
+    "lat": 41.8675,
+    "lng": -87.6482
+  },
+  {
+    "name": "UIC Pavilion",
+    "address": "525 S. Racine Ave, Chicago, IL 60607",
+    "lat": 41.874997,
+    "lng": -87.65616
+  },
+  {
+    "name": "College of Medicine",
+    "address": "1853 W. Polk St, Chicago, IL 60612",
+    "lat": 41.870747,
+    "lng": -87.673034
+  }
+]

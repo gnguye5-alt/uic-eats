@@ -1,0 +1,351 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+/* Landing Page */
+.landing-page {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    background-color: white;
+    overflow: auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+    color: #333;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.top-bar-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.group-order-button.clicked {
+    background-color: #42a5f5;
+    color: white;
+}
+
+.logo {
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive logo size */
+    font-weight: bold;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.search-input {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive input font size */
+}
+
+/* Group Order Button */
+.group-order-button {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-row {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.filter-button {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    font-size: clamp(0.8rem, 2.5vw, 1rem); /* Responsive filter button font size */
+}
+
+.filter-button:last-child {
+    border-right: none;
+}
+
+.filter-button.active {
+    background-color: #90caf9;
+}
+
+/* Section */
+.section {
+    width: 100%;
+}
+
+.section-title {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Horizontal scroll for group orders on mobile */
+.group-orders {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.order-card {
+    min-width: 200px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.address-label {
+    color: #777;
+}
+
+/* Restaurant Grid */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.restaurant-card {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    gap: 8px;
+    max-width: 100%; /* Ensure it fills available space */
+}
+
+/* Pseudo-image block */
+.restaurant-card .item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+/* 
+/* X-shaped placeholder 
+.restaurant-card .item-image::before,
+.restaurant-card .item-image::after {
+    content: '';
+    position: absolute;
+    background-color: #999;
+    width: 60%;
+    height: 1px;
+    top: 50%;
+    left: 20%;
+}
+
+.restaurant-card .item-image::before {
+    transform: rotate(45deg);
+}
+
+.restaurant-card .item-image::after {
+    transform: rotate(-45deg);
+} 
+*/
+
+/* Placeholder details text */
+.restaurant-card .item-details {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    min-width: 0;
+    border-radius: 4px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  
+  .tag {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 10px;
+  }
+  
+
+/* Responsive Behavior - simplified since we're matching exact mockup */
+@media (max-width: 599px) {
+
+    /* Mobile */
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        overflow-y: auto;
+    }
+
+    .restaurant-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .restaurant-card .item-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .restaurant-card .item-details {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+
+    /* Tablet */
+    .landing-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    body {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .top-bar-header {
+        padding: 0 1rem;
+    }
+
+    .group-order-button {
+        font-size: 1.2rem;
+    }
+
+    /* Larger logo for tablet */
+    .logo {
+        font-size: 2rem;
+    }
+
+    .search-input {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+    }
+
+    .restaurant-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 1rem;
+        overflow-y: auto;
+        height: auto;
+        max-height: calc(100vh - 120px);
+    }
+
+    .restaurant-card {
+        padding: 15px;
+    }
+
+    .restaurant-card .item-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .restaurant-card .item-details {
+        padding: 12px 18px;
+    }
+
+    .group-orders {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .order-card {
+        min-width: 250px;
+    }
+}
+
+@media (min-width: 1260px) {
+
+    /* Desktop */
+    .restaurant-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+    }
+
+    .restaurant-card {
+        padding: 20px;
+        max-width: 100%;
+    }
+}

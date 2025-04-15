@@ -1,11 +1,26 @@
+/* This component displays a list of available group orders based on their  distance from the user's current location (currently hardcoded to Thomas Beckham Hall).
+ - "Back" button returns to the previous screen
+*/
+
 import React, { useState, useEffect } from "react";
+import "./ViewPostGroupOrder.css";
 import { useNavigate } from "react-router-dom";
 import pickupPoints from "../data/PickupPoints.json";
 
-const GroupOrders = () => {
+const ViewPostGroupOrder = () => {
   const navigate = useNavigate();
+  const [locationLoading, set_loc_load] = useState(true);
   const [groupOrders, set_group_order] = useState([]);
-  const [loading, set_loc_load] = useState(true);
+
+  // Navigate to the PostConfirmation screen when the user clicks on the post group order box (this is just temporary for testing)
+  const handlePostGroupOrder = () => {
+    navigate("/post-confirmation");
+  };
+
+  // Navigate to the OrderStatus screen when the user clicks on a group order box
+  const handleOrderBoxClick = () => {
+    navigate("/order-status");
+  };
 
   // Calculate distance between 2 places
   const distance_calc = (lat1, lon1, lat2, lon2) => {
@@ -52,33 +67,44 @@ const GroupOrders = () => {
     set_loc_load(false);
   }, []);
 
-  // Click on a group order
-  const handleOrderClick = () => {
-    navigate("blank");
-  };
-
   return (
-    <div className="section">
-      <h2 className="section-title">Current active group orders</h2>
+    <div className="confirmation-container">
+      <div className="back-button" onClick={() => navigate(-1)}>
+        Back
+      </div>
 
-      {loading ? (
+      <h2 className="page-title">Current Active Group Order</h2>
+
+      {locationLoading ? (
         <div className="loading-indicator">Distance away...</div>
       ) : (
-        <div className="group-orders">
+        <div className="order-boxes-wrapper">
           {groupOrders.map((order, index) => (
-            <div key={index} className="order-card" onClick={handleOrderClick}>
-              <p className="miles-text">{order.miles}</p>
-              <p className="address-text">
+            <div
+              className="order-box"
+              key={index}
+              onClick={handleOrderBoxClick}
+            >
+              <div>Fees you pay:</div>
+              <div>{order.miles}</div>
+              <div className="order-address">
+                Address: <br />
                 {order.name}
                 <br />
                 {order.address}
-              </p>
+              </div>
             </div>
           ))}
         </div>
       )}
+
+      <h3 className="alt-option-text">Not the group you want?</h3>
+
+      <div className="post-box" onClick={handlePostGroupOrder}>
+        Post group order so others can join!
+      </div>
     </div>
   );
 };
 
-export default GroupOrders;
+export default ViewPostGroupOrder;

@@ -1,16 +1,16 @@
 [
     {
-        "name": "Sushi Plus",
+        "name": "Jarabe - Taqueria",
         "categories": [
-            "Japanese",
-            "Seafood"
+            "Mexican",
+            "Tacos"
         ],
         "criteria": [
             "Fast",
             "Cheap"
         ],
         "distance": "0.4 miles",
-        "image": "/images/sushi-plus.jpg"
+        "image": "/images/jarabe.png"
     },
     {
         "name": "Popeyes",

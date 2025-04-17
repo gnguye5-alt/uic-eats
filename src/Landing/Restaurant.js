@@ -9,8 +9,8 @@ const Restaurant = () => {
     const [restaurant, setRestaurant] = useState(null);
     const [menu, setMenu] = useState([]);
     const [activeTab, setActiveTab] = useState('menu');
-    const { addItem } = useContext(CartContext); 
-    
+    const { addItem } = useContext(CartContext);
+
     useEffect(() => {
         if (!id) return;
 
@@ -32,6 +32,10 @@ const Restaurant = () => {
     }, [id]);
 
     if (!restaurant) return <div>Loading restaurant...</div>;
+
+    const studentPicks = [...menu]
+        .sort((a, b) => b.likes - a.likes)  // sort by most likes
+        .slice(0, 3);                       // pick top 3
 
     return (
         <div className="landing-page">
@@ -66,12 +70,22 @@ const Restaurant = () => {
 
             {activeTab === 'menu' && (
                 <>
+                    <h3 className="student-picks-title">Student Picks</h3>
                     <div className="student-picks">
-                        {[...Array(5)].map((_, i) => (
-                            <img key={i} src={restaurant.image} alt="student-pick" />
+                        {studentPicks.map((item, i) => (
+                            <div key={i} className="student-pick-card">
+                                <img
+                                    src={item.image || restaurant.image}
+                                    alt={item.name}
+                                    className="student-pick-img"
+                                />
+                                <div className="student-pick-name">{item.name}</div>
+                            </div>
                         ))}
                     </div>
 
+                    <h3 className="restaurant-menu-title">Menu</h3>
+                  
                     <div className="restaurant-menu">
                         {menu.length > 0 ? (
                             menu.map((item, idx) => (
@@ -97,13 +111,14 @@ const Restaurant = () => {
             )}
 
             {activeTab === 'info' && (
-                <div className="restaurant-info">
-                    <h4>Address</h4>
-                    <p>{restaurant.address || "1225 W Taylor St, Chicago, IL 60607"}</p>
-
-                    <h4>Opening Hours</h4>
-                    <p>{restaurant.hours || "Mon–Sat: 11am – 10pm"}</p>
-                </div>
+               <div className="restaurant-info">
+               <h4>Address</h4>
+               <p>{restaurant.address}</p>
+             
+               <h4>Opening Hours</h4>
+               <p>{restaurant.hours}</p>
+             </div>
+             
             )}
 
 

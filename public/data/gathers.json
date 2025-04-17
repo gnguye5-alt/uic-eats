@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Classic Milk Tea",
+      "description": "Smooth black tea with creamy milk and brown sugar boba.",
+      "price": 5.25,
+      "category": "Milk Tea",
+      "likes": 98,
+      "votes": 112,
+      "image": "/images/menu/gathers-milk-tea.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Taro Milk Tea",
+      "description": "Purple taro root blended with milk for a rich and nutty flavor.",
+      "price": 5.75,
+      "category": "Milk Tea",
+      "likes": 91,
+      "votes": 106,
+      "image": "/images/menu/gathers-taro.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Strawberry Green Tea",
+      "description": "Green tea shaken with strawberry syrup and real fruit bits.",
+      "price": 5.50,
+      "category": "Fruit Tea",
+      "likes": 84,
+      "votes": 97,
+      "image": "/images/menu/gathers-strawberry-green.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mango Yakult",
+      "description": "Tropical mango juice mixed with probiotic Yakult yogurt drink.",
+      "price": 5.99,
+      "category": "Specialty Drinks",
+      "likes": 89,
+      "votes": 103,
+      "image": "/images/menu/gathers-mango-yakult.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lychee Jelly Refresher",
+      "description": "Iced lychee green tea with lychee jelly and aloe vera.",
+      "price": 5.75,
+      "category": "Fruit Tea",
+      "likes": 77,
+      "votes": 88,
+      "image": "/images/menu/gathers-lychee.jpg"
+    }
+  ]
+  

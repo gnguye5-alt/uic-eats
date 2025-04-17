@@ -23,7 +23,7 @@ const GroupOrders = () => {
             style={{ cursor: 'pointer' }} 
           >
             <p className="restaurant-name">{order.restaurant}</p>
-            <p className="fees-text">Fees you pay:</p>
+            <p className="fees-text">Fees you pay: {order.fee}</p>
             <p className="miles-text">{order.distance}</p>
             <p className="address-label">Address: {order.address}</p>
           </div>

@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Pad See Ew",
+      "description": "Stir-fried wide rice noodles with egg, Chinese broccoli, and soy sauce. Choice of chicken or tofu.",
+      "price": 12.99,
+      "category": "Noodles",
+      "likes": 106,
+      "votes": 124,
+      "image": "/images/menu/joyyee-pad-see-ew.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Orange Chicken Bento",
+      "description": "Crispy battered chicken glazed in tangy orange sauce, served with rice and veggies.",
+      "price": 13.99,
+      "category": "Entrees",
+      "likes": 94,
+      "votes": 110,
+      "image": "/images/menu/joyyee-orange-chicken.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Korean BBQ Short Ribs",
+      "description": "Marinated beef short ribs grilled with sweet-savory soy sauce. Served with rice and kimchi.",
+      "price": 15.49,
+      "category": "Grill",
+      "likes": 101,
+      "votes": 117,
+      "image": "/images/menu/joyyee-korean-ribs.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Tropical Mango Freeze",
+      "description": "Slushy mango smoothie blended with mango chunks and tapioca pearls.",
+      "price": 5.75,
+      "category": "Drinks",
+      "likes": 89,
+      "votes": 102,
+      "image": "/images/menu/joyyee-mango-freeze.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lychee Green Tea",
+      "description": "Chilled green tea with lychee syrup, fruit bits, and crystal boba.",
+      "price": 5.50,
+      "category": "Drinks",
+      "likes": 77,
+      "votes": 86,
+      "image": "/images/menu/joyyee-lychee-tea.jpg"
+    }
+  ]
+  

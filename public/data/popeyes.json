@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Spicy Chicken Sandwich",
+      "description": "Crispy chicken breast with spicy mayo and pickles on a toasted brioche bun.",
+      "price": 5.99,
+      "category": "Sandwiches",
+      "likes": 123,
+      "votes": 141,
+      "image": "/images/menu/popeyes-spicy-sandwich.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Classic Chicken Sandwich",
+      "description": "Crispy chicken breast with mayo and pickles on a toasted brioche bun.",
+      "price": 5.49,
+      "category": "Sandwiches",
+      "likes": 108,
+      "votes": 130,
+      "image": "/images/menu/popeyes-classic-sandwich.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Signature Chicken (2pc)",
+      "description": "Two pieces of juicy, crispy fried chicken with your choice of spicy or mild.",
+      "price": 4.99,
+      "category": "Chicken",
+      "likes": 97,
+      "votes": 112,
+      "image": "/images/menu/popeyes-2pc-chicken.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Mashed Potatoes with Cajun Gravy",
+      "description": "Creamy mashed potatoes topped with flavorful Cajun-style gravy.",
+      "price": 2.49,
+      "category": "Sides",
+      "likes": 83,
+      "votes": 96,
+      "image": "/images/menu/popeyes-mashed.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cajun Fries",
+      "description": "Seasoned fries with bold Cajun flavor.",
+      "price": 2.99,
+      "category": "Sides",
+      "likes": 78,
+      "votes": 89,
+      "image": "/images/menu/popeyes-fries.jpg"
+    }
+  ]
+  

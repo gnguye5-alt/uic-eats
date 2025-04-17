@@ -6,7 +6,9 @@
       "criteria": ["Fast", "Cheap"],
       "distance": "0.4 miles",
       "image": "/images/jarabe.png",
-      "menuFile": "jarabe.json"
+      "menuFile": "jarabe.json",
+      "address": "1104 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 8:30am – 9:00pm"
     },
     {
       "id": 2,
@@ -15,7 +17,9 @@
       "criteria": ["Cheap", "Fast"],
       "distance": "0.4 miles",
       "image": "/images/popeyes.png",
-      "menuFile": "popeyes.json"
+      "menuFile": "popeyes.json",
+      "address": "1251 S Halsted St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:00am – 10:00pm"
     },
     {
       "id": 3,
@@ -24,7 +28,9 @@
       "criteria": ["Great for finals", "Big portions", "Fast"],
       "distance": "0.7 miles",
       "image": "/images/lotus.png",
-      "menuFile": "lotus.json"
+      "menuFile": "lotus.json",
+      "address": "719 W Maxwell St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:30am – 8:00pm"
     },
     {
       "id": 4,
@@ -32,7 +38,10 @@
       "categories": ["Chinese", "Asian Fusion", "Desserts"],
       "criteria": ["Big portions", "Fast"],
       "distance": "0.6 miles",
-      "image": "/images/joy-yee.png"
+      "image": "/images/joy-yee.png",
+      "menuFile": "joy-yee.json",
+      "address": "2139 S China Pl, Chicago, IL 60616",
+      "hours": "Mon–Sat: 11:00am – 9:30pm"
     },
     {
       "id": 5,
@@ -41,7 +50,9 @@
       "criteria": ["Great for finals", "Fast"],
       "distance": "1.5 miles",
       "image": "/images/ramen-san.jpg",
-      "menuFile": "ramen-san.json"
+      "menuFile": "ramen-san.json",
+      "address": "59 W Hubbard St, Chicago, IL 60654",
+      "hours": "Mon–Sat: 11:00am – 11:00pm"
     },
     {
       "id": 6,
@@ -50,7 +61,9 @@
       "criteria": ["Cheap", "Fast", "Big portions"],
       "distance": "1 mile",
       "image": "/images/golden-thai.avif",
-      "menuFile": "golden-thai.json"
+      "menuFile": "golden-thai.json",
+      "address": "1509 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 11:00am – 10:00pm"
     },
     {
       "id": 7,
@@ -59,7 +72,9 @@
       "criteria": ["Cheap", "Fast", "Big portions"],
       "distance": "0.5 miles",
       "image": "/images/ghareeb.jpeg",
-      "menuFile": "ghareeb-menu.json"
+      "menuFile": "ghareeb-menu.json",
+      "address": "807 W Roosevelt Rd, Chicago, IL 60608",
+      "hours": "Mon–Sat: 8:00am – 2:00am"
     },
     {
       "id": 10,
@@ -67,24 +82,33 @@
       "categories": ["Fast food", "Sandwiches"],
       "criteria": ["Quick Service", "Takeout", "Healthy Options"],
       "distance": "0.4 miles",
-      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+      "image": "/images/subway.png",
+      "menuFile": "subway.json",
+      "address": "1252 S Halsted St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 7:00am – 10:00pm"
     },
-    {
-      "id": 11,
-      "name": "Starbucks",
-      "categories": ["Cafe", "Coffee"],
-      "criteria": ["On Campus", "Fast"],
-      "distance": "0.1 miles",
-      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-    },
+   
     {
       "id": 12,
       "name": "Papa Johns",
-      "categories": ["Fast food", "Pizza"],
+      "categories": ["Fast food", "Pizza", "Snacks"],
       "criteria": ["Delivery", "Student Discount", "Group Orders", "Great for finals"],
       "distance": "0.5 miles",
       "image": "/images/papa-johns.png",
-      "menuFile": "papa-johns-menu.json"
+      "menuFile": "papa-johns-menu.json",
+      "address": "1151 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:00am – 12:00am"
+    },
+    {
+      "id": 13,
+      "name": "Gathers Tea Bar",
+      "categories": ["Bubble Tea", "Drinks"],
+      "criteria": ["Fast", "Great for finals"],
+      "distance": "0.6 miles",
+      "image": "/images/gathers.jpeg",
+      "menuFile": "gathers.json",
+      "address": "1214 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 11:am – 9:00pm"
     }
   ]
   

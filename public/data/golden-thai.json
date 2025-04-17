@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Pad Thai",
+      "description": "Stir-fried rice noodles with egg, bean sprouts, green onions, and crushed peanuts. Choice of tofu or chicken.",
+      "price": 11.99,
+      "category": "Noodles",
+      "likes": 114,
+      "votes": 130,
+      "image": "/images/menu/golden-pad-thai.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Thai Fried Rice",
+      "description": "Jasmine rice stir-fried with egg, onions, tomatoes, and Thai seasoning. Choice of protein.",
+      "price": 10.99,
+      "category": "Rice Dishes",
+      "likes": 96,
+      "votes": 110,
+      "image": "/images/menu/golden-thai-fried-rice.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Red Curry",
+      "description": "Spicy red curry with coconut milk, bamboo shoots, bell peppers, and basil leaves. Served with rice.",
+      "price": 12.99,
+      "category": "Curry",
+      "likes": 88,
+      "votes": 105,
+      "image": "/images/menu/golden-red-curry.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Thai Spring Rolls (4pc)",
+      "description": "Crispy vegetable spring rolls served with sweet chili dipping sauce.",
+      "price": 5.99,
+      "category": "Appetizers",
+      "likes": 81,
+      "votes": 92,
+      "image": "/images/menu/golden-spring-rolls.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Thai Iced Tea",
+      "description": "Sweet and creamy Thai black tea served over ice with milk.",
+      "price": 3.49,
+      "category": "Drinks",
+      "likes": 74,
+      "votes": 85,
+      "image": "/images/menu/golden-thai-tea.jpg"
+    }
+  ]
+  

@@ -5,7 +5,9 @@
       "description": "pate, pork roll, pork belly, raw onion, soy sauce, house mayo, pickled daikon and carrot",
       "price": 11.45,
       "category": "Banh Mi",
-      "image": "/images/menu/banhmi-belly-classic.jpg"
+      "likes": 150,
+      "votes": 85,
+      "image": "/images/menu/belly.webp"
     },
     {
       "id": 2,
@@ -13,7 +15,9 @@
       "description": "honey grilled pork, lemongrass, garlic, fish sauce, house mayo, pickled daikon and carrot",
       "price": 10.45,
       "category": "Banh Mi",
-      "image": "/images/menu/banhmi-honey-pork.jpg"
+      "likes": 120,
+      "votes": 65,
+      "image": "/images/menu/grilledpork.webp"
     },
     {
       "id": 3,
@@ -21,7 +25,9 @@
       "description": "ginger chicken, grilled onion, soy sauce, house mayo, pickled daikon and carrot, cucumber",
       "price": 10.45,
       "category": "Banh Mi",
-      "image": "/images/menu/banhmi-ginger-chicken.jpg"
+      "likes": 95,
+      "votes": 55,
+      "image": "/images/menu/chicken.webp"
     },
     {
       "id": 4,
@@ -29,7 +35,9 @@
       "description": "beef, sunny-side egg, grilled onion, oyster sauce, five spice, house mayo, pickled daikon and carrot",
       "price": 13.95,
       "category": "Banh Mi",
-      "image": "/images/menu/banhmi-sunny-beef.jpg"
+      "likes": 180,
+      "votes": 95,
+      "image": "/images/menu/beef.webp"
     },
     {
       "id": 5,
@@ -37,7 +45,9 @@
       "description": "tofu, avocado, tomato, sweet chili, soy sauce, house mayo, pickled daikon and carrot",
       "price": 11.95,
       "category": "Vegetarian",
-      "image": "/images/menu/banhmi-veggiecado.jpg"
+      "likes": 110,
+      "votes": 75,
+      "image": "/images/menu/veggie.webp"
     }
   ]
   

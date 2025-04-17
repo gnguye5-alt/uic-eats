@@ -1,134 +1,106 @@
 [
     {
-        "name": "Jarabe - Taqueria",
-        "categories": [
-            "Mexican",
-            "Tacos"
-        ],
-        "criteria": [
-            "Fast",
-            "Cheap"
-        ],
-        "distance": "0.4 miles",
-        "image": "/images/jarabe.png"
+      "id": 1,
+      "name": "Jarabe - Taqueria",
+      "categories": ["Mexican", "Tacos"],
+      "criteria": ["Fast", "Cheap"],
+      "distance": "0.4 miles",
+      "image": "/images/jarabe.png",
+      "menuFile": "jarabe.json"
     },
     {
-        "name": "Popeyes",
-        "categories": [
-            "Fast food",
-            "Burgers",
-            "American"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "0.4 miles",
-        "image": "/images/popeyes.png"
+      "id": 2,
+      "name": "Popeyes",
+      "categories": ["Fast food", "Burgers", "American"],
+      "criteria": ["Cheap", "Fast"],
+      "distance": "0.4 miles",
+      "image": "/images/popeyes.png",
+      "menuFile": "popeyes.json"
     },
     {
-        "name": "Lotus Banh Mi",
-        "categories": [
-            "Vietnamese",
-            "Noodles",
-            "Sandwiches"
-        ],
-        "criteria": [
-            "Great for finals",
-            "Big portions",
-            "Fast"
-        ],
-        "distance": "0.7 miles",
-        "image": "/images/lotus.png"
+      "id": 3,
+      "name": "Lotus Banh Mi",
+      "categories": ["Vietnamese", "Noodles", "Sandwiches"],
+      "criteria": ["Great for finals", "Big portions", "Fast"],
+      "distance": "0.7 miles",
+      "image": "/images/lotus.png",
+      "menuFile": "lotus.json"
     },
     {
-        "name": "Joy Yee Noodle",
-        "categories": [
-            "Chinese",
-            "Asian Fusion",
-            "Desserts"
-        ],
-        "criteria": [
-            "Big portions",
-            "Fast"
-        ],
-        "distance": "0.6 miles",
-        "image": "/images/joy-yee.png"
+      "id": 4,
+      "name": "Joy Yee Noodle",
+      "categories": ["Chinese", "Asian Fusion", "Desserts"],
+      "criteria": ["Big portions", "Fast"],
+      "distance": "0.6 miles",
+      "image": "/images/joy-yee.png"
     },
     {
-        "name": "Ramen-San",
-        "categories": [
-            "Japanese",
-            "Ramen"
-        ],
-        "criteria": [
-            "Great for finals",
-            "Fast"
-        ],
-        "distance": "1.5 miles",
-        "image": "/images/ramen-san.jpg"
+      "id": 5,
+      "name": "Ramen-San",
+      "categories": ["Japanese", "Ramen"],
+      "criteria": ["Great for finals", "Fast"],
+      "distance": "1.5 miles",
+      "image": "/images/ramen-san.jpg",
+      "menuFile": "ramen-san.json"
     },
     {
-        "name": "Golden Thai",
-        "categories": [
-            "Asian",
-            "Thai"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast",
-            "Big portions"
-        ],
-        "distance": "1 miles",
-        "image": "/images/golden-thai.avif"
+      "id": 6,
+      "name": "Golden Thai",
+      "categories": ["Asian", "Thai"],
+      "criteria": ["Cheap", "Fast", "Big portions"],
+      "distance": "1 mile",
+      "image": "/images/golden-thai.avif",
+      "menuFile": "golden-thai.json"
     },
     {
-        "name": "Ghareeb Nawaz",
-        "categories": [
-            "Indian",
-            "Fast food"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast",
-            "Big portions"
-        ],
-        "distance": "0.5 miles",
-        "image": "/images/ghareeb.jpeg"
+      "id": 7,
+      "name": "Ghareeb Nawaz",
+      "categories": ["Indian", "Fast food"],
+      "criteria": ["Cheap", "Fast", "Big portions"],
+      "distance": "0.5 miles",
+      "image": "/images/ghareeb.jpeg",
+      "menuFile": "ghareeb-menu.json"
     },
     {
-        "name": "Halal Guys",
-        "categories": ["Fast food", "Middle Eastern"],
-        "criteria": ["Halal", "Quick Service", "Takeout"],
-        "distance": "0.3 mi",
-        "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 8,
+      "name": "Halal Guys",
+      "categories": ["Fast food", "Middle Eastern"],
+      "criteria": ["Halal", "Quick Service", "Takeout"],
+      "distance": "0.3 miles",
+      "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
     },
     {
-        "name": "Panda Express",
-        "categories": ["Fast food", "Chinese"],
-        "criteria": ["Quick Service", "Takeout", "Student Discount"],
-        "distance": "0.2 mi",
-        "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 9,
+      "name": "Panda Express",
+      "categories": ["Fast food", "Chinese"],
+      "criteria": ["Quick Service", "Takeout", "Student Discount"],
+      "distance": "0.2 miles",
+      "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
     },
     {
-        "name": "Subway",
-        "categories": ["Fast food", "Sandwiches"],
-        "criteria": ["Quick Service", "Takeout", "Healthy Options"],
-        "distance": "0.4 mi",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 10,
+      "name": "Subway",
+      "categories": ["Fast food", "Sandwiches"],
+      "criteria": ["Quick Service", "Takeout", "Healthy Options"],
+      "distance": "0.4 miles",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
     },
     {
-        "name": "Starbucks",
-        "categories": ["Cafe", "Coffee"],
-        "criteria": ["On Campus", "Fast"],
-        "distance": "0.1 mi",
-        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 11,
+      "name": "Starbucks",
+      "categories": ["Cafe", "Coffee"],
+      "criteria": ["On Campus", "Fast"],
+      "distance": "0.1 miles",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
     },
     {
-        "name": "Pazza Pizza",
-        "categories": ["Fast food", "Pizza"],
-        "criteria": ["Delivery", "Student Discount", "Group Orders", "Great for finals"],
-        "distance": "0.5 mi",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 12,
+      "name": "Papa Johns",
+      "categories": ["Fast food", "Pizza"],
+      "criteria": ["Delivery", "Student Discount", "Group Orders", "Great for finals"],
+      "distance": "0.5 miles",
+      "image": "/images/papa-johns.png",
+      "menuFile": "papa-johns-menu.json"
     }
-]
+  ]
+  

@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Belly Classic Banh Mi",
+      "description": "pate, pork roll, pork belly, raw onion, soy sauce, house mayo, pickled daikon and carrot",
+      "price": 11.45,
+      "category": "Banh Mi",
+      "image": "/images/menu/banhmi-belly-classic.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Honey Grilled Pork Banh Mi",
+      "description": "honey grilled pork, lemongrass, garlic, fish sauce, house mayo, pickled daikon and carrot",
+      "price": 10.45,
+      "category": "Banh Mi",
+      "image": "/images/menu/banhmi-honey-pork.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ginger Chicken Banh Mi",
+      "description": "ginger chicken, grilled onion, soy sauce, house mayo, pickled daikon and carrot, cucumber",
+      "price": 10.45,
+      "category": "Banh Mi",
+      "image": "/images/menu/banhmi-ginger-chicken.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sunny-Side Beef Banh Mi",
+      "description": "beef, sunny-side egg, grilled onion, oyster sauce, five spice, house mayo, pickled daikon and carrot",
+      "price": 13.95,
+      "category": "Banh Mi",
+      "image": "/images/menu/banhmi-sunny-beef.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Veggiecado Banh Mi",
+      "description": "tofu, avocado, tomato, sweet chili, soy sauce, house mayo, pickled daikon and carrot",
+      "price": 11.95,
+      "category": "Vegetarian",
+      "image": "/images/menu/banhmi-veggiecado.jpg"
+    }
+  ]
+  

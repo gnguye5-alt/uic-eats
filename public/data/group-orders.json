@@ -1,0 +1,27 @@
+[
+    {
+      "id": 7,
+      "restaurant": "Ghareeb Nawaz",
+      "distance": "0.2 miles",
+      "address": "2039 W Taylor St, Chicago, IL"
+    },
+    {
+      "id": 5,
+      "restaurant": "Ramen-San",
+      "distance": "0.1 miles",
+      "address": "59 W Hubbard St, Chicago, IL"
+    },
+    {
+      "id": 2,
+      "restaurant": "Popeyes",
+      "distance": "0.3 miles",
+      "address": "1101 W Jackson Blvd, Chicago, IL"
+    },
+    {
+      "id": 6,
+      "restaurant": "Golden Thai",
+      "distance": "1.0 miles",
+      "address": "1352 S Union Ave, Chicago, IL"
+    }
+  ]
+  

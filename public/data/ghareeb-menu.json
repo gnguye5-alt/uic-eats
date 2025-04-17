@@ -1,0 +1,64 @@
+[
+    {
+      "id": 1,
+      "name": "Butter Chicken Boneless",
+      "description": "Boneless Chicken in a Butter Sauce",
+      "price": 11.99,
+      "category": "Entrees",
+      "likes": 93,
+      "votes": 157,
+      "image": "/images/menu/butter-chicken.avif"
+    },
+    {
+      "id": 2,
+      "name": "Butter Chicken Bowl",
+      "description": "Boneless Butter Chicken over Rice",
+      "price": 11.99,
+      "category": "Entrees",
+      "likes": 89,
+      "votes": 107,
+      "image": "/images/menu/butter-bowl.avif"
+    },
+   
+    {
+      "id": 3,
+      "name": "Chili Chicken Paratha",
+      "description": "Spicy boneless chicken wrapped in a bread",
+      "price": 7.49,
+      "category": "Wraps",
+      "likes": 84,
+      "votes": 65,
+      "image": "/images/menu/chili-chicken-paratha.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Butter Paneer Curry",
+      "description": "Rich, creamy curry with tender paneer cubes in a spiced tomato-based sauce.",
+      "price": 7.99,
+      "category": "Vegetarian",
+      "likes": 89,
+      "votes": 49,
+      "image": "/images/menu/butter-paneer-curry.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lamb Curry",
+      "description": "Lamb marinated and cooked with yogurt, fried onion and mughlai spices.",
+      "price": 11.99,
+      "category": "Entrees",
+      "likes": 70,
+      "votes": 44,
+      "image": "/images/menu/lamb-curry.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dal Curry",
+      "description": "Lentils tempered with spices.",
+      "price": 6.99,
+      "category": "Vegetarian",
+      "likes": 78,
+      "votes": 32,
+      "image": "/images/menu/dal-curry.jpg"
+    }
+  ]
+  

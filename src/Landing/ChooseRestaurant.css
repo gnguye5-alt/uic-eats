@@ -37,23 +37,24 @@
 }
 
 /* === Search Bar === */
-.search-container {
+.search-wrapper {
     display: flex;
     justify-content: center;
-    /* center horizontally */
-    align-items: center;
     width: 100%;
-}
-
-.search-input {
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .search-input {
     width: 100%;
     max-width: 600px;
-    /* limits how wide it grows */
+    padding: 0.5rem 1rem;
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
+    box-sizing: border-box;
+  }
+  
 
 /* === Restaurant List Grid === */
 .restaurant-grid {

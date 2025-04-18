@@ -8,7 +8,9 @@
       "image": "/images/jarabe.png",
       "menuFile": "jarabe.json",
       "address": "1104 W Taylor St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 8:30am – 9:00pm"
+      "hours": "Mon–Sat: 8:30am – 9:00pm",
+      "rating": 4.6,
+      "reviews": 182
     },
     {
       "id": 2,
@@ -19,7 +21,9 @@
       "image": "/images/popeyes.png",
       "menuFile": "popeyes.json",
       "address": "1251 S Halsted St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 10:00am – 10:00pm"
+      "hours": "Mon–Sat: 10:00am – 10:00pm",
+      "rating": 4.2,
+      "reviews": 245
     },
     {
       "id": 3,
@@ -30,18 +34,22 @@
       "image": "/images/lotus.png",
       "menuFile": "lotus.json",
       "address": "719 W Maxwell St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 10:30am – 8:00pm"
+      "hours": "Mon–Sat: 10:30am – 8:00pm",
+      "rating": 4.8,
+      "reviews": 168
     },
     {
       "id": 4,
       "name": "Joy Yee Noodle",
-      "categories": ["Chinese", "Asian Fusion", "Desserts"],
+      "categories": ["Chinese", "Asian Fusion", "Bubble Tea"],
       "criteria": ["Big portions", "Fast"],
       "distance": "0.6 miles",
       "image": "/images/joy-yee.png",
       "menuFile": "joy-yee.json",
       "address": "2139 S China Pl, Chicago, IL 60616",
-      "hours": "Mon–Sat: 11:00am – 9:30pm"
+      "hours": "Mon–Sat: 11:00am – 9:30pm",
+      "rating": 4.5,
+      "reviews": 310
     },
     {
       "id": 5,
@@ -52,7 +60,9 @@
       "image": "/images/ramen-san.jpg",
       "menuFile": "ramen-san.json",
       "address": "59 W Hubbard St, Chicago, IL 60654",
-      "hours": "Mon–Sat: 11:00am – 11:00pm"
+      "hours": "Mon–Sat: 11:00am – 11:00pm",
+      "rating": 4.7,
+      "reviews": 194
     },
     {
       "id": 6,
@@ -63,7 +73,9 @@
       "image": "/images/golden-thai.avif",
       "menuFile": "golden-thai.json",
       "address": "1509 W Taylor St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 11:00am – 10:00pm"
+      "hours": "Mon–Sat: 11:00am – 10:00pm",
+      "rating": 4.4,
+      "reviews": 122
     },
     {
       "id": 7,
@@ -74,7 +86,9 @@
       "image": "/images/ghareeb.jpeg",
       "menuFile": "ghareeb-menu.json",
       "address": "807 W Roosevelt Rd, Chicago, IL 60608",
-      "hours": "Mon–Sat: 8:00am – 2:00am"
+      "hours": "Mon–Sat: 8:00am – 2:00am",
+      "rating": 4.6,
+      "reviews": 286
     },
     {
       "id": 10,
@@ -85,9 +99,10 @@
       "image": "/images/subway.png",
       "menuFile": "subway.json",
       "address": "1252 S Halsted St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 7:00am – 10:00pm"
+      "hours": "Mon–Sat: 7:00am – 10:00pm",
+      "rating": 4.0,
+      "reviews": 158
     },
-   
     {
       "id": 12,
       "name": "Papa Johns",
@@ -97,7 +112,9 @@
       "image": "/images/papa-johns.png",
       "menuFile": "papa-johns-menu.json",
       "address": "1151 W Taylor St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 10:00am – 12:00am"
+      "hours": "Mon–Sat: 10:00am – 12:00am",
+      "rating": 4.1,
+      "reviews": 202
     },
     {
       "id": 13,
@@ -108,7 +125,9 @@
       "image": "/images/gathers.jpeg",
       "menuFile": "gathers.json",
       "address": "1214 W Taylor St, Chicago, IL 60607",
-      "hours": "Mon–Sat: 11:am – 9:00pm"
+      "hours": "Mon–Sat: 11:00am – 9:00pm",
+      "rating": 4.9,
+      "reviews": 97
     }
   ]
   

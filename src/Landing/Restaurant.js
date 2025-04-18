@@ -18,51 +18,95 @@ const Restaurant = () => {
 
     useEffect(() => {
         if (!id) return;
-      
+
         fetch('/data/restaurants.json')
-          .then(res => res.json())
-          .then(data => {
-            const found = data.find(r => r.id === parseInt(id));
-            if (!found) return;
+            .then(res => res.json())
+            .then(data => {
+                const found = data.find(r => r.id === parseInt(id));
+                if (!found) return;
+
+                const incomingId = parseInt(id);
+
+                if (currentRestaurantId !== null && currentRestaurantId !== incomingId) {
+                    clearCart();
+                }
+
+                setCurrentRestaurantId(incomingId);
+                setRestaurant(found);
+
+                if (found.menuFile) {
+                    fetch(`/data/${found.menuFile}`)
+                        .then(res => res.json())
+                        .then(setMenu)
+                        .catch(err => console.error("Failed to load menu:", err));
+                }
+            });
+    }, [id, clearCart, currentRestaurantId, setCurrentRestaurantId]);
+
+    // const handleNewReview = (newRating) => {
+    //     const stats = getRestaurantStats(restaurant.id);
+    //     const totalRating = stats.rating * stats.reviews;
+    //     const newReviews = stats.reviews + 1;
+    //     const newAvgRating = (totalRating + newRating) / newReviews;
       
-            const incomingId = parseInt(id);
+    //     const updatedStats = {
+    //       rating: parseFloat(newAvgRating.toFixed(1)),
+    //       reviews: newReviews
+    //     };
       
-            if (currentRestaurantId !== null && currentRestaurantId !== incomingId) {
-              clearCart();
-            }
+    //     localStorage.setItem(
+    //       `restaurant-${restaurant.id}-reviews`,
+    //       JSON.stringify(updatedStats)
+    //     );
       
-            setCurrentRestaurantId(incomingId);
-            setRestaurant(found);
+    //     // optional: re-render
+    //     setRestaurant((prev) => ({
+    //       ...prev,
+    //       rating: updatedStats.rating,
+    //       reviews: updatedStats.reviews
+    //     }));
+    //   };
       
-            if (found.menuFile) {
-              fetch(`/data/${found.menuFile}`)
-                .then(res => res.json())
-                .then(setMenu)
-                .catch(err => console.error("Failed to load menu:", err));
-            }
-          });
-      }, [id, clearCart, currentRestaurantId, setCurrentRestaurantId]);
-      
-    
 
     if (!restaurant) return <div>Loading restaurant...</div>;
 
     const studentPicks = [...menu]
         .sort((a, b) => b.likes - a.likes)
         .slice(0, 3);
+    const getRestaurantStats = (id) => {
+        const localData = localStorage.getItem(`restaurant-${id}-reviews`);
+        if (localData) {
+            return JSON.parse(localData);
+        }
+
+        // fallback to static JSON data
+        return {
+            rating: restaurant.rating,
+            reviews: restaurant.reviews
+        };
+    };
 
     return (
         <div className="landing-page">
             <div className="restaurant-header">
                 <button className="back-button" onClick={() => navigate(-1)}>←
-                <span className="back-text">Back</span>
+                    <span className="back-text">Back</span>
                 </button>
                 <h2 className="restaurant-name">{restaurant.name}</h2>
             </div>
 
 
             <img src={restaurant.image} alt={restaurant.name} className="restaurant-hero" />
-            <p className="restaurant-meta">4.5 ⭐ (200 reviews) • {restaurant.distance}</p>
+            {(() => {
+                const { rating, reviews } = getRestaurantStats(restaurant.id);
+                return (
+                    <p className="restaurant-meta">
+                    {rating} ⭐ ({reviews} <span className="reviews-label">reviews</span>) • {restaurant.distance}
+                  </p>
+                  
+                );
+            })()}
+
 
             <div className="tabs">
                 <div className={`tab ${activeTab === 'menu' ? 'active' : ''}`} onClick={() => setActiveTab('menu')}>Menu</div>

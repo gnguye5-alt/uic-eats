@@ -7,17 +7,17 @@
       "category": "Noodles",
       "likes": 106,
       "votes": 124,
-      "image": "/images/menu/joyyee-pad-see-ew.jpg"
+      "image": "/images/menu/Pad-See-Ew-.jpg"
     },
     {
       "id": 2,
-      "name": "Orange Chicken Bento",
-      "description": "Crispy battered chicken glazed in tangy orange sauce, served with rice and veggies.",
+      "name": "Beef Cubes Over Tomato Sauce Rice",
+      "description": "Black pepper beef cubes served over steamed rice with a tangy tomato sauce.",
       "price": 13.99,
       "category": "Entrees",
       "likes": 94,
       "votes": 110,
-      "image": "/images/menu/joyyee-orange-chicken.jpg"
+      "image": "/images/menu/beef-cubes.avif"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "category": "Grill",
       "likes": 101,
       "votes": 117,
-      "image": "/images/menu/joyyee-korean-ribs.jpg"
+      "image": "/images/menu/ribs.avif"
     },
     {
       "id": 4,
@@ -37,7 +37,7 @@
       "category": "Drinks",
       "likes": 89,
       "votes": 102,
-      "image": "/images/menu/joyyee-mango-freeze.jpg"
+      "image": "/images/menu/mango-freeze.webp"
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "category": "Drinks",
       "likes": 77,
       "votes": 86,
-      "image": "/images/menu/joyyee-lychee-tea.jpg"
+      "image": "/images/menu/lychee-green-tea.webp"
     }
   ]
   

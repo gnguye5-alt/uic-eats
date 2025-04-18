@@ -26,15 +26,15 @@ const ChooseRestaurant = () => {
       <h2 className="restaurant-name">Choose a restaurant to start group ordering</h2>
 
       {/* Search Input */}
-      <div className="search-container">
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Search restaurants..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
+      <div className="search-wrapper">
+  <input
+    className="search-input"
+    type="text"
+    placeholder="Search restaurants..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
 
       {/* Restaurant List */}
       <div className="restaurant-grid">

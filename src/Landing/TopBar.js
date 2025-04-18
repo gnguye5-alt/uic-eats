@@ -43,7 +43,6 @@ const TopBar = () => {
       </div>
 
       <div className="search-container">
-        <span className="search-icon">🔍</span>
         <input 
           type="text" 
           className="search-input" 

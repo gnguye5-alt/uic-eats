@@ -7,7 +7,7 @@
       "category": "Pizza",
       "likes": 112,
       "votes": 130,
-      "image": "/images/menu/papa-pepperoni.jpg"
+      "image": "/images/menu/pepperoni.webp"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "category": "Sides",
       "likes": 89,
       "votes": 102,
-      "image": "/images/menu/papa-cheese-sticks.jpg"
+      "image": "/images/menu/Cheesesticks.webp"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "category": "Wings",
       "likes": 76,
       "votes": 92,
-      "image": "/images/menu/papa-buffalo-wings.jpg"
+      "image": "/images/menu/buffalo-wings.webp"
     },
     {
       "id": 4,
@@ -37,7 +37,7 @@
       "category": "Pizza",
       "likes": 94,
       "votes": 110,
-      "image": "/images/menu/papa-garden-pizza.jpg"
+      "image": "/images/menu/garden.webp"
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "category": "Drinks",
       "likes": 55,
       "votes": 61,
-      "image": "/images/menu/papa-pepsi.jpg"
+      "image": "/images/menu/pepsi.webp"
     }
   ]
   

@@ -11,29 +11,39 @@ const Restaurant = () => {
     const [restaurant, setRestaurant] = useState(null);
     const [menu, setMenu] = useState([]);
     const [activeTab, setActiveTab] = useState('menu');
-    const { addItem, cart } = useContext(CartContext);
+    const { addItem, cart, clearCart, currentRestaurantId, setCurrentRestaurantId } = useContext(CartContext);
+
 
     const [showCart, setShowCart] = useState(false);
 
     useEffect(() => {
         if (!id) return;
-
+      
         fetch('/data/restaurants.json')
-            .then(res => res.json())
-            .then(data => {
-                const found = data.find(r => r.id === parseInt(id));
-                if (!found) return;
-
-                setRestaurant(found);
-
-                if (found.menuFile) {
-                    fetch(`/data/${found.menuFile}`)
-                        .then(res => res.json())
-                        .then(setMenu)
-                        .catch(err => console.error("Failed to load menu:", err));
-                }
-            });
-    }, [id]);
+          .then(res => res.json())
+          .then(data => {
+            const found = data.find(r => r.id === parseInt(id));
+            if (!found) return;
+      
+            const incomingId = parseInt(id);
+      
+            if (currentRestaurantId !== null && currentRestaurantId !== incomingId) {
+              clearCart();
+            }
+      
+            setCurrentRestaurantId(incomingId);
+            setRestaurant(found);
+      
+            if (found.menuFile) {
+              fetch(`/data/${found.menuFile}`)
+                .then(res => res.json())
+                .then(setMenu)
+                .catch(err => console.error("Failed to load menu:", err));
+            }
+          });
+      }, [id, clearCart, currentRestaurantId, setCurrentRestaurantId]);
+      
+    
 
     if (!restaurant) return <div>Loading restaurant...</div>;
 
@@ -44,9 +54,12 @@ const Restaurant = () => {
     return (
         <div className="landing-page">
             <div className="restaurant-header">
-                <button className="back-button" onClick={() => navigate(-1)}>← Back</button>
+                <button className="back-button" onClick={() => navigate(-1)}>←
+                <span className="back-text">Back</span>
+                </button>
                 <h2 className="restaurant-name">{restaurant.name}</h2>
             </div>
+
 
             <img src={restaurant.image} alt={restaurant.name} className="restaurant-hero" />
             <p className="restaurant-meta">4.5 ⭐ (200 reviews) • {restaurant.distance}</p>

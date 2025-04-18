@@ -6,35 +6,49 @@
     flex-direction: column;
     gap: 1.5rem;
 }
-
 .restaurant-header {
     display: flex;
+    flex-direction: column; /* ✅ stack vertically */
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0 1rem;
     margin-top: 0.5rem;
-}
-
-.back-button {
-    position: absolute;
-    left: 0;
+    position: relative;
+  }
+  
+  .back-button {
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    margin-left: 0.5rem;
     color: #333;
-}
-
-.restaurant-name {
+    line-height: 1;
+    margin-left: 0.5rem;
+  }
+  @media (max-width: 480px) {
+    .back-button {
+      font-size: 1rem; /* make arrow a bit more readable */
+      padding: 0.2rem 0.45rem;
+    }
+  
+    .back-button .back-text {
+      display: none;
+      position: center; /* 👈 hide "Back" text on phones */
+    }
+  }
+  
+  .restaurant-name {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin: 0;
-}
-
+  }
+  
+  
+  
 /* Title image */
 .restaurant-hero {
     width: 100%;

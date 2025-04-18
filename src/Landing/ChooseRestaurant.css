@@ -1,60 +1,69 @@
 /* === Header with Back Button and Title === */
+/* === Header with Back Button and Title === */
 .restaurant-header {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* centers the title */
     position: relative;
     margin-top: 1rem;
-    padding: 0 1rem;
-  }
-  
-  .back-button {
-    position: absolute;
+ 
+}
+
+.back-button {
+    position: absolute; 
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 0.4rem 0.8rem;
+    padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(0.6rem, 2vw, 1.2rem);
+    /* Responsive */
     font-size: clamp(0.85rem, 2.5vw, 1rem);
     cursor: pointer;
     color: #333;
-  }
-  .restaurant-name {
+}
+
+.restaurant-name {
     font-size: clamp(1.3rem, 4vw, 1.5rem);
     font-weight: bold;
     text-align: center;
     margin: 0;
     max-width: 100%;
-    padding: 0 2.5rem; /* Reserve space left/right for back button */
+    padding: 0 2.5rem;
+    /* Reserve space left/right for back button */
     box-sizing: border-box;
-  }
-  
-  /* === Search Bar === */
-  .search-container {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  
-  .search-input {
-    padding: 0.5rem 1rem;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 20px;
+}
+
+/* === Search Bar === */
+.search-container {
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    width: 100%;
+}
+
+.search-input {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    /* limits how wide it grows */
     border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  /* === Restaurant List Grid === */
-  .restaurant-grid {
+    border-radius: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* === Restaurant List Grid === */
+.restaurant-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem 0;
-  }
-  
-  .restaurant-card {
+}
+
+.restaurant-card {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -64,44 +73,60 @@
     border-radius: 12px;
     cursor: pointer;
     transition: box-shadow 0.2s ease;
-  }
-  
-  .restaurant-card:hover {
+}
+
+.restaurant-card:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  .item-image {
+}
+
+.item-image {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-  }
-  
-  .item-details h3 {
+}
+
+.item-details h3 {
     margin: 0 0 0.25rem;
     font-size: 1rem;
-  }
-  
-  .item-details p {
+}
+
+.item-details p {
     margin: 0;
     font-size: 0.85rem;
     color: #555;
-  }
-  
-  /* === Tags === */
-  .tags {
+}
+
+/* === Tags === */
+.tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 0.4rem;
-  }
-  
-  .tag {
+}
+
+.tag {
     background-color: #e0f7fa;
     color: #00796b;
     padding: 2px 8px;
     font-size: 0.7rem;
     border-radius: 10px;
-  }
-  
+}
+
+
+/* ✅ Smaller button on tablets and below */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.5rem;
+    }
+}
+
+/* ✅ Even smaller on mobile */
+@media (max-width: 480px) {
+    .back-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.5rem;
+    }
+}

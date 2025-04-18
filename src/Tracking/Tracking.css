@@ -1,0 +1,122 @@
+body {
+    overflow: hidden;
+}
+
+.tracking-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.back-button {
+    width: 95%;
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+.back-button img {
+    width: 1000px;
+    height: 1000px;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: rgb(255, 1, 1);
+}
+
+.icon:active {
+    color:#970000
+}
+
+/* TRACKING STATUS SECTION */
+.tracking-status {
+    width: 90%;
+}
+
+.tracking-status h1 {
+    margin-bottom: 0.5rem;
+}
+
+.finish-time {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.time-value {
+    margin-left: 2rem;
+}
+
+.progress-bar {
+    margin: 0.5rem 0;
+    background-color: #dddddd;
+    height: 1rem;
+    border-radius: 3px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #7fac7f;
+}
+
+/* MAP SECTION */
+.Map-Container {
+    width: 100%;
+    z-index: 0;
+}
+
+.map {
+    width: 100%;
+    height: 70vh;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* ORDER DETAILS SECTION */
+.order-details {
+    width: 100%;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+}
+
+.drag-handle {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 40px;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    background-color: rgb(119, 123, 119, 0.6);
+    cursor: ns-resize;
+    touch-action: none;
+}
+
+.order-details-header {
+    display: flex;
+}
+
+.order-details-header h2 {
+    margin-left: 5%;
+}
+
+.order-details-header h3 {
+    position: absolute;
+    right: 0;
+    padding-top: 0.3rem;
+    margin-right: 5%;
+}
+
+.order-num, .address {
+    margin: 16px 5%;
+    border: 1px solid black;
+    padding: 0.7rem;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import RestaurantCard from './RestaurantCard'; 
-import './TopBar.css'; 
+import RestaurantCard from './RestaurantCard'; // ✅ Make sure path is correct
+import './TopBar.css'; //sdad
 const TopBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -43,6 +43,7 @@ const TopBar = () => {
       </div>
 
       <div className="search-container">
+        <span className="search-icon">🔍</span>
         <input 
           type="text" 
           className="search-input" 

@@ -18,7 +18,7 @@ html, body, #root {
 }
 
 .back-button {
-  font-size: 50px;
+  font-size: 20px;
   cursor: pointer;
   color: black;
   position: absolute;
@@ -52,13 +52,6 @@ html, body, #root {
       justify-content: center;
       /* gap: 10px; */
     }
-  }
-  
-  .back-button {
-    font-size: 20px !important;       
-    font-weight: 100;
-    cursor: pointer;
-    color: black;
   }
   
   .page-title {

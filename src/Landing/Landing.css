@@ -1,31 +1,26 @@
-* {
+html, body, #root {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
     height: 100%;
-}
-
+    background-color: #f8f9fa;
+  }
 /* Landing Page */
 .landing-page {
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     position: relative;
-    background-color: white;
+    background-color: #f8f9fa;
     overflow: auto;
 }
 
 .page-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
-    color: #333;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #003C71;
+    font-weight: 600;
 }
 
 /* Top Bar */
@@ -34,6 +29,11 @@ body {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    background: linear-gradient(135deg, #003C71 0%, #D50032 100%);
+    padding: 1.5rem 1rem;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: -1.5rem -1.5rem 0 -1.5rem;
 }
 
 .top-bar-header {
@@ -45,24 +45,35 @@ body {
 }
 
 .group-order-button.clicked {
-    background-color: #42a5f5;
-    color: white;
+    background-color: white;
+    color: #D50032;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .logo {
-    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive logo size */
+    font-size: clamp(1rem, 4vw, 1.5rem);
     font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Group Order Button */
 .group-order-button {
-    background-color: white;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #003C71;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
-    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-order-button:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
 }
 
 /* Filters */
@@ -75,21 +86,23 @@ body {
 .filter-row {
     display: flex;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .filter-button {
     flex: 1;
     padding: 0.5rem;
     background-color: white;
-    color: black;
+    color: #003C71;
     border: none;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #e0e0e0;
     cursor: pointer;
     text-align: center;
-    font-size: clamp(0.8rem, 2.5vw, 1rem); /* Responsive filter button font size */
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    transition: all 0.2s ease;
 }
 
 .filter-button:last-child {
@@ -97,7 +110,12 @@ body {
 }
 
 .filter-button.active {
-    background-color: #90caf9;
+    background-color: #D50032;
+    color: white;
+}
+
+.filter-button:hover {
+    background-color: #f8f9fa;
 }
 
 /* Section */
@@ -110,6 +128,7 @@ body {
     font-weight: 600;
     margin-bottom: 1rem;
     text-align: center;
+    color: #003C71;
 }
 
 /* Horizontal scroll for group orders on mobile */
@@ -123,18 +142,55 @@ body {
 }
 
 .order-card {
-    min-width: 200px;
+    min-width: 300px;             
     flex-shrink: 0;
     scroll-snap-align: start;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1rem;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;               
     text-align: center;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
 }
 
-.address-label {
-    color: #777;
+.order-card .restaurant-name {
+    color: #003C71;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.order-card .fees-text {
+    color: #D50032;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.order-card .miles-text {
+    color: #7C7C7C;
+    margin-bottom: 0.25rem;
+}
+
+.order-card .address-label {
+    color: #7C7C7C;
+    font-size: 0.8rem;
+}
+
+.restaurant-name {
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    padding: 0 2.5rem;
+    box-sizing: border-box;
+    color: #003C71;
+}
+
+.order-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Restaurant Grid */
@@ -149,13 +205,19 @@ body {
 .restaurant-card {
     display: flex;
     align-items: center;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: white;
     margin-bottom: 10px;
     gap: 8px;
-    max-width: 100%; /* Ensure it fills available space */
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.restaurant-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Pseudo-image block */
@@ -167,35 +229,15 @@ body {
     flex-shrink: 0;
     margin-right: 10px;
 }
-/* 
-/* X-shaped placeholder 
-.restaurant-card .item-image::before,
-.restaurant-card .item-image::after {
-    content: '';
-    position: absolute;
-    background-color: #999;
-    width: 60%;
-    height: 1px;
-    top: 50%;
-    left: 20%;
-}
-
-.restaurant-card .item-image::before {
-    transform: rotate(45deg);
-}
-
-.restaurant-card .item-image::after {
-    transform: rotate(-45deg);
-} 
-*/
 
 /* Placeholder details text */
 .restaurant-card .item-details {
     flex: 1;
-    border: 1px solid #ddd;
-    padding: 6px 10px;
+    border: 1px solid #e0e0e0;
+    padding: 8px 12px;
     min-width: 0;
-    border-radius: 4px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
 }
 
 .tags {
@@ -203,16 +245,16 @@ body {
     flex-wrap: wrap;
     gap: 4px;
     margin-top: 6px;
-  }
+}
   
-  .tag {
-    background-color: #e0f7fa;
-    color: #00796b;
+.tag {
+    background-color: #f8e8e8;
+    color: #D50032;
     padding: 2px 8px;
     font-size: 0.7rem;
     border-radius: 10px;
-  }
-  
+    font-weight: 500;
+}
 
 /* Responsive Behavior - simplified since we're matching exact mockup */
 @media (max-width: 599px) {

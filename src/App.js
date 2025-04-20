@@ -20,7 +20,7 @@ function App() {
     <CartProvider>
       <Router>
         <Routes>
-          {/* <Route path="/" element={<Landing />} /> */}
+          <Route path="/" element={<Landing />} />
           <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> {/* temporary usage forq testing */}
           <Route path="/" element={<ViewPostGroupOrder />} />
           <Route path="/post-confirmation" element={<PostConfirmation />} />

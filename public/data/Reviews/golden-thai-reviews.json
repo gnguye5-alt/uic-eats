@@ -1,0 +1,82 @@
+[
+  {
+    "dish_id": 1,
+    "dish_name": "Pad Thai",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Pad! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Pad Thai was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 2,
+    "dish_name": "Thai Fried Rice",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Thai! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Thai Fried Rice was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 3,
+    "dish_name": "Red Curry",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Red! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Red Curry was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 4,
+    "dish_name": "Thai Spring Rolls (4pc)",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Thai! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Thai Spring Rolls (4pc) was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 5,
+    "dish_name": "Thai Iced Tea",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Thai! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Thai Iced Tea was excellent! Highly recommended."
+      }
+    ]
+  }
+]

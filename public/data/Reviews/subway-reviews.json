@@ -1,0 +1,82 @@
+[
+  {
+    "dish_id": 1,
+    "dish_name": "Tuna Sandwich",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Tuna! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Tuna Sandwich was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 2,
+    "dish_name": "Veggie Delite Sandwich",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Veggie! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Veggie Delite Sandwich was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 3,
+    "dish_name": "The Hotshot Italiano",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the The! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "The Hotshot Italiano was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 4,
+    "dish_name": "Oven Roasted Turkey Sandwich",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Oven! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Oven Roasted Turkey Sandwich was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 5,
+    "dish_name": "Chocolate Chip Cookie",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Chocolate! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Chocolate Chip Cookie was excellent! Highly recommended."
+      }
+    ]
+  }
+]

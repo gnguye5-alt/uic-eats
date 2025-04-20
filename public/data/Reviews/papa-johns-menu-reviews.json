@@ -1,0 +1,82 @@
+[
+  {
+    "dish_id": 1,
+    "dish_name": "Pepperoni Pizza (Large)",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Pepperoni! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Pepperoni Pizza (Large) was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 2,
+    "dish_name": "Cheese Sticks",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Cheese! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Cheese Sticks was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 3,
+    "dish_name": "Buffalo Wings (8pc)",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Buffalo! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Buffalo Wings (8pc) was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 4,
+    "dish_name": "Garden Fresh Pizza (Medium)",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Garden! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Garden Fresh Pizza (Medium) was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 5,
+    "dish_name": "20 oz Pepsi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the 20! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "20 oz Pepsi was excellent! Highly recommended."
+      }
+    ]
+  }
+]

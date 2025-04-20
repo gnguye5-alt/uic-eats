@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Tuna Sandwich",
+      "description": " 100% wild caught tuna blended with creamy mayo then topped with your choice of crisp, fresh veggies.",
+      "price": 6.99,
+      "category": "Sandwiches",
+      "likes": 132,
+      "votes": 156,
+      "image": "/images/menu/subway-tuna.avif"
+    },
+    {
+      "id": 2,
+      "name": "Veggie Delite Sandwich",
+      "description": "A fresh combination of lettuce, tomatoes, cucumbers, green peppers, and onions. A great meatless option.",
+      "price": 5.49,
+      "category": "Sandwiches",
+      "likes": 101,
+      "votes": 122,
+      "image": "/images/menu/subway-veggie.avif"
+    },
+    {
+      "id": 3,
+      "name": "The Hotshot Italiano",
+      "description": "Artisan Italian bread is topped with spicy pepperoni, Genoa salami, 2x provolone cheese, jalapeño peppers, lettuce, tomatoes, red onions, and an explosive finish of our MVP Parmesan Vinaigrette®.",
+      "price": 7.49,
+      "category": "Sandwiches",
+      "likes": 118,
+      "votes": 134,
+      "image": "/images/menu/subway-spicy-italian.avif"
+    },
+    {
+      "id": 4,
+      "name": "Oven Roasted Turkey Sandwich",
+      "description": "It’s full of flavor and made to order with your choice of crisp veggies, melted American cheese, served on our freshly baked, Hearty Multigrain bread.",
+      "price": 7.99,
+      "category": "Sandwiches",
+      "likes": 109,
+      "votes": 128,
+      "image": "/images/menu/subway-turkey.avif"
+    },
+    {
+      "id": 5,
+      "name": "Chocolate Chip Cookie",
+      "description": "Freshly baked, soft, and chewy chocolate chip cookie.",
+      "price": 1.25,
+      "category": "Desserts",
+      "likes": 145,
+      "votes": 162,
+      "image": "/images/menu/subway-cookie.avif"
+    }
+  ]
+  

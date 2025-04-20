@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Pepperoni Pizza (Large)",
+      "description": "Classic large pizza with signature pepperoni and mozzarella cheese.",
+      "price": 13.99,
+      "category": "Pizza",
+      "likes": 112,
+      "votes": 130,
+      "image": "/images/menu/pepperoni.webp"
+    },
+    {
+      "id": 2,
+      "name": "Cheese Sticks",
+      "description": "Fresh dough baked to a golden brown, topped with garlic sauce and mozzarella.",
+      "price": 6.49,
+      "category": "Sides",
+      "likes": 89,
+      "votes": 102,
+      "image": "/images/menu/Cheesesticks.webp"
+    },
+    {
+      "id": 3,
+      "name": "Buffalo Wings (8pc)",
+      "description": "Juicy chicken wings tossed in spicy buffalo sauce.",
+      "price": 9.99,
+      "category": "Wings",
+      "likes": 76,
+      "votes": 92,
+      "image": "/images/menu/buffalo-wings.webp"
+    },
+    {
+      "id": 4,
+      "name": "Garden Fresh Pizza (Medium)",
+      "description": "Crispy crust with green peppers, onions, mushrooms, black olives, and tomato.",
+      "price": 12.49,
+      "category": "Pizza",
+      "likes": 94,
+      "votes": 110,
+      "image": "/images/menu/garden.webp"
+    },
+    {
+      "id": 5,
+      "name": "20 oz Pepsi",
+      "description": "Refreshing cold Pepsi in a 20 oz bottle.",
+      "price": 1.99,
+      "category": "Drinks",
+      "likes": 55,
+      "votes": 61,
+      "image": "/images/menu/pepsi.webp"
+    }
+  ]
+  

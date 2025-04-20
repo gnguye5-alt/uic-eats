@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Arrachera (Skirt Steak) Taco",
+      "description": "Marinated premium skirt steak, topped with onions and cilantro.",
+      "price": 4.50,
+      "category": "Tacos",
+      "likes": 142,
+      "votes": 158,
+      "image": "/images/menu/steak.avif"
+    },
+    {
+      "id": 2,
+      "name": "Fish Taco Ensenada",
+      "description": "Crispy beer battered Mahi Mahi, pico de Gallo, red cabbage slaw, chipotle mayo.",
+      "price": 5.50,
+      "category": "Tacos",
+      "likes": 128,
+      "votes": 144,
+      "image": "/images/menu/fish-taco.avif"
+    },
+    {
+      "id": 3,
+      "name": "Al Pastor Taco",
+      "description": "Seasoned pork. Served with onions, cilantro, & pineapple.",
+      "price": 3.85,
+      "category": "Tacos",
+      "likes": 136,
+      "votes": 155,
+      "image": "/images/menu/alpastor.avif"
+    },
+    {
+      "id": 4,
+      "name": "Quesabirria",
+      "description": "Birria de Res tacos with melty Chihuahua cheese. Topped with onion, cilantro, radish and pickled veggies.",
+      "price": 4.00,
+      "category": "Tacos",
+      "likes": 157,
+      "votes": 174,
+      "image": "/images/menu/quesabirria.avif"
+    },
+    {
+      "id": 5,
+      "name": "Garlic Shrimp",
+      "description": "Guajillo and garlic shrimp, onion, cilantro & avocado.",
+      "price": 4.50,
+      "category": "Tacos",
+      "likes": 122,
+      "votes": 139,
+      "image": "/images/menu/garlic-shrimp.avif"
+    }
+  ]
+  

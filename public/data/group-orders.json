@@ -1,0 +1,31 @@
+[
+    {
+      "id": 7,
+      "restaurant": "Ghareeb Nawaz",
+      "distance": "0.5 miles",
+      "address": "2039 W Taylor St, Chicago, IL",
+      "fee": "$0.75"
+    },
+    {
+      "id": 5,
+      "restaurant": "Ramen-San",
+      "distance": "2.5 miles",
+      "address": "59 W Hubbard St, Chicago, IL",
+      "fee": "$1.59"
+    },
+    {
+      "id": 2,
+      "restaurant": "Popeyes",
+      "distance": "0.6 miles",
+      "address": "1101 W Jackson Blvd, Chicago, IL",
+      "fee": "$0.75"
+    },
+    {
+      "id": 6,
+      "restaurant": "Golden Thai",
+      "distance": "1.0 miles",
+      "address": "1352 S Union Ave, Chicago, IL",
+      "fee": "$1.00"
+    }
+  ]
+  

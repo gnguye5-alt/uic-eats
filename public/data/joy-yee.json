@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Pad See Ew",
+      "description": "Stir-fried wide rice noodles with egg, Chinese broccoli, and soy sauce. Choice of chicken or tofu.",
+      "price": 12.99,
+      "category": "Noodles",
+      "likes": 106,
+      "votes": 124,
+      "image": "/images/menu/Pad-See-Ew-.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Beef Cubes Over Tomato Sauce Rice",
+      "description": "Black pepper beef cubes served over steamed rice with a tangy tomato sauce.",
+      "price": 13.99,
+      "category": "Entrees",
+      "likes": 94,
+      "votes": 110,
+      "image": "/images/menu/beef-cubes.avif"
+    },
+    {
+      "id": 3,
+      "name": "Korean BBQ Short Ribs",
+      "description": "Marinated beef short ribs grilled with sweet-savory soy sauce. Served with rice and kimchi.",
+      "price": 15.49,
+      "category": "Grill",
+      "likes": 101,
+      "votes": 117,
+      "image": "/images/menu/ribs.avif"
+    },
+    {
+      "id": 4,
+      "name": "Tropical Mango Freeze",
+      "description": "Slushy mango smoothie blended with mango chunks and tapioca pearls.",
+      "price": 5.75,
+      "category": "Drinks",
+      "likes": 89,
+      "votes": 102,
+      "image": "/images/menu/mango-freeze.webp"
+    },
+    {
+      "id": 5,
+      "name": "Lychee Green Tea",
+      "description": "Chilled green tea with lychee syrup, fruit bits, and crystal boba.",
+      "price": 5.50,
+      "category": "Drinks",
+      "likes": 77,
+      "votes": 86,
+      "image": "/images/menu/lychee-green-tea.webp"
+    }
+  ]
+  

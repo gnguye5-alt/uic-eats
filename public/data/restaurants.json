@@ -1,307 +1,133 @@
 [
     {
-        "name": "Jarabe - Taqueria",
-        "categories": [
-            "Mexican",
-            "Tacos"
-        ],
-        "criteria": [
-            "Fast",
-            "Cheap"
-        ],
-        "distance": "0.4 miles",
-        "image": "/images/jarabe.png"
+      "id": 1,
+      "name": "Jarabe - Taqueria",
+      "categories": ["Mexican", "Tacos"],
+      "criteria": ["Fast", "Cheap"],
+      "distance": "0.4 miles",
+      "image": "/images/jarabe.png",
+      "menuFile": "jarabe.json",
+      "address": "1104 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 8:30am – 9:00pm",
+      "rating": 4.6,
+      "reviews": 182
     },
     {
-        "name": "Popeyes",
-        "categories": [
-            "Fast food",
-            "Burgers",
-            "American"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "0.2 miles",
-        "image": "/images/popeyes.png"
+      "id": 2,
+      "name": "Popeyes",
+      "categories": ["Fast food", "Burgers", "American"],
+      "criteria": ["Cheap", "Fast"],
+      "distance": "0.4 miles",
+      "image": "/images/popeyes.png",
+      "menuFile": "popeyes.json",
+      "address": "1251 S Halsted St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:00am – 10:00pm",
+      "rating": 4.2,
+      "reviews": 245
     },
     {
-        "name": "Lotus Vietnamese Sandwiches",
-        "categories": [
-            "Vietnamese",
-            "Noodles",
-            "Soup"
-        ],
-        "criteria": [
-            "Great for finals",
-            "Big portions"
-        ],
-        "distance": "0.5 miles",
-        "image": "/images/lotus.png"
+      "id": 3,
+      "name": "Lotus Banh Mi",
+      "categories": ["Vietnamese", "Noodles", "Sandwiches"],
+      "criteria": ["Great for finals", "Big portions", "Fast"],
+      "distance": "0.7 miles",
+      "image": "/images/lotus.png",
+      "menuFile": "lotus.json",
+      "address": "719 W Maxwell St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:30am – 8:00pm",
+      "rating": 4.8,
+      "reviews": 168
     },
     {
-        "name": "Joy Yee Noodle",
-        "categories": [
-            "Chinese",
-            "Asian Fusion",
-            "Desserts"
-        ],
-        "criteria": [
-            "Big portions",
-            "Fast"
-        ],
-        "distance": "0.6 miles",
-        "image": "/images/joy-yee.jpg"
+      "id": 4,
+      "name": "Joy Yee Noodle",
+      "categories": ["Chinese", "Asian Fusion", "Bubble Tea"],
+      "criteria": ["Big portions", "Fast"],
+      "distance": "0.6 miles",
+      "image": "/images/joy-yee.png",
+      "menuFile": "joy-yee.json",
+      "address": "2139 S China Pl, Chicago, IL 60616",
+      "hours": "Mon–Sat: 11:00am – 9:30pm",
+      "rating": 4.5,
+      "reviews": 310
     },
     {
-        "name": "Ramen-San",
-        "categories": [
-            "Japanese",
-            "Ramen"
-        ],
-        "criteria": [
-            "Great for finals",
-            "Fast"
-        ],
-        "distance": "0.8 miles",
-        "image": "/images/ramen-san.jpg"
+      "id": 5,
+      "name": "Ramen-San",
+      "categories": ["Japanese", "Ramen"],
+      "criteria": ["Great for finals", "Fast"],
+      "distance": "1.5 miles",
+      "image": "/images/ramen-san.jpg",
+      "menuFile": "ramen-san.json",
+      "address": "59 W Hubbard St, Chicago, IL 60654",
+      "hours": "Mon–Sat: 11:00am – 11:00pm",
+      "rating": 4.7,
+      "reviews": 194
     },
     {
-        "name": "Restaurant 6",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "0.8 miles",
-        "image": "/images/restaurant-6.jpg"
+      "id": 6,
+      "name": "Golden Thai",
+      "categories": ["Asian", "Thai"],
+      "criteria": ["Cheap", "Fast", "Big portions"],
+      "distance": "1 mile",
+      "image": "/images/golden-thai.avif",
+      "menuFile": "golden-thai.json",
+      "address": "1509 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 11:00am – 10:00pm",
+      "rating": 4.4,
+      "reviews": 122
     },
     {
-        "name": "Restaurant 7",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "0.9 miles",
-        "image": "/images/restaurant-7.jpg"
+      "id": 7,
+      "name": "Ghareeb Nawaz",
+      "categories": ["Indian", "Fast food"],
+      "criteria": ["Cheap", "Fast", "Big portions"],
+      "distance": "0.5 miles",
+      "image": "/images/ghareeb.jpeg",
+      "menuFile": "ghareeb-menu.json",
+      "address": "807 W Roosevelt Rd, Chicago, IL 60608",
+      "hours": "Mon–Sat: 8:00am – 2:00am",
+      "rating": 4.6,
+      "reviews": 286
     },
     {
-        "name": "Restaurant 8",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.0 miles",
-        "image": "/images/restaurant-8.jpg"
+      "id": 10,
+      "name": "Subway",
+      "categories": ["Fast food", "Sandwiches"],
+      "criteria": ["Quick Service", "Takeout", "Healthy Options"],
+      "distance": "0.4 miles",
+      "image": "/images/subway.png",
+      "menuFile": "subway.json",
+      "address": "1252 S Halsted St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 7:00am – 10:00pm",
+      "rating": 4.0,
+      "reviews": 158
     },
     {
-        "name": "Restaurant 9",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.1 miles",
-        "image": "/images/restaurant-9.jpg"
+      "id": 12,
+      "name": "Papa Johns",
+      "categories": ["Fast food", "Pizza", "Snacks"],
+      "criteria": ["Delivery", "Student Discount", "Group Orders", "Great for finals"],
+      "distance": "0.5 miles",
+      "image": "/images/papa-johns.png",
+      "menuFile": "papa-johns-menu.json",
+      "address": "1151 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 10:00am – 12:00am",
+      "rating": 4.1,
+      "reviews": 202
     },
     {
-        "name": "Restaurant 10",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.2 miles",
-        "image": "/images/restaurant-10.jpg"
-    },
-    {
-        "name": "Restaurant 11",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.3 miles",
-        "image": "/images/restaurant-11.jpg"
-    },
-    {
-        "name": "Restaurant 12",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.4 miles",
-        "image": "/images/restaurant-12.jpg"
-    },
-    {
-        "name": "Restaurant 13",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.5 miles",
-        "image": "/images/restaurant-13.jpg"
-    },
-    {
-        "name": "Restaurant 14",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.6 miles",
-        "image": "/images/restaurant-14.jpg"
-    },
-    {
-        "name": "Restaurant 15",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.7 miles",
-        "image": "/images/restaurant-15.jpg"
-    },
-    {
-        "name": "Restaurant 16",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.8 miles",
-        "image": "/images/restaurant-16.jpg"
-    },
-    {
-        "name": "Restaurant 17",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "1.9 miles",
-        "image": "/images/restaurant-17.jpg"
-    },
-    {
-        "name": "Restaurant 18",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "2.0 miles",
-        "image": "/images/restaurant-18.jpg"
-    },
-    {
-        "name": "Restaurant 19",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "2.1 miles",
-        "image": "/images/restaurant-19.jpg"
-    },
-    {
-        "name": "Restaurant 20",
-        "categories": [
-            "Category A",
-            "Category B"
-        ],
-        "criteria": [
-            "Cheap",
-            "Fast"
-        ],
-        "distance": "2.2 miles",
-        "image": "/images/restaurant-20.jpg"
-    },
-    {
-        "name": "UIC Dining Hall",
-        "categories": ["Cafeteria", "American"],
-        "criteria": ["On Campus", "Meal Plan", "Buffet"],
-        "distance": "0.1 mi",
-        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-        "name": "Halal Guys",
-        "categories": ["Fast food", "Middle Eastern"],
-        "criteria": ["Halal", "Quick Service", "Takeout"],
-        "distance": "0.3 mi",
-        "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-        "name": "Panda Express",
-        "categories": ["Fast food", "Chinese"],
-        "criteria": ["Quick Service", "Takeout", "Student Discount"],
-        "distance": "0.2 mi",
-        "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-        "name": "Subway",
-        "categories": ["Fast food", "Sandwiches"],
-        "criteria": ["Quick Service", "Takeout", "Healthy Options"],
-        "distance": "0.4 mi",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-        "name": "Starbucks",
-        "categories": ["Cafe", "Coffee"],
-        "criteria": ["On Campus", "Student Discount", "Study Spot"],
-        "distance": "0.1 mi",
-        "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    },
-    {
-        "name": "Pizza Hut",
-        "categories": ["Fast food", "Pizza"],
-        "criteria": ["Delivery", "Student Discount", "Group Orders"],
-        "distance": "0.5 mi",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      "id": 13,
+      "name": "Gathers Tea Bar",
+      "categories": ["Bubble Tea", "Drinks"],
+      "criteria": ["Fast", "Great for finals"],
+      "distance": "0.6 miles",
+      "image": "/images/gathers.jpeg",
+      "menuFile": "gathers.json",
+      "address": "1214 W Taylor St, Chicago, IL 60607",
+      "hours": "Mon–Sat: 11:00am – 9:00pm",
+      "rating": 4.9,
+      "reviews": 97
     }
-]
+  ]
+  

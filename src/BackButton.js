@@ -11,9 +11,6 @@ const BackButton = ({className, route}) => {
     const navigate = useNavigate();
 
     const handleExit = () => {
-        // Clear stored delivery info -- DELETEME
-        localStorage.removeItem('selectedLocation');
-        localStorage.removeItem('deliveryType');
         navigate(route);
     }
     

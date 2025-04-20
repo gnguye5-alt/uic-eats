@@ -1,4 +1,5 @@
 .tracking-page {
+    background-color: #f8f9fa;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -21,11 +22,11 @@
 
 .icon:hover {
     cursor: pointer;
-    color: rgb(255, 1, 1);
+    color: #D50032;
 }
 
 .icon:active {
-    color:#970000
+    color: #970000
 }
 
 /* TRACKING STATUS SECTION */
@@ -35,12 +36,28 @@
 
 .tracking-status h1 {
     margin-bottom: 0.5rem;
+    color: #003C71;
 }
 
 .finish-time {
-    border: 1px solid black;
+    position: relative;
+    color: #333333;
     padding: 1rem;
-    border-radius: 3px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #D50032, #003C71);
+    z-index: 0;
+}
+
+.finish-time::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    background: #ffffff;
+    border-radius: 7px; 
+    z-index: -1;
 }
 
 .time-value {
@@ -56,7 +73,7 @@
 
 .progress-fill {
     height: 100%;
-    background-color: #7fac7f;
+    background-color: #0085AD;
 }
 
 /* MAP SECTION */
@@ -77,11 +94,11 @@
 
 /* ORDER DETAILS SECTION */
 .order-details {
+    background-color: #f8f9fa;
     width: 100%;
     border-top: 1px solid black;
     position: fixed;
     bottom: 0;
-    background: #fff;
 }
 
 .drag-handle {
@@ -99,10 +116,12 @@
 
 .order-details-header {
     display: flex;
+    color: #003C71;
 }
 
 .order-details-header h2 {
     margin-left: 5%;
+    color: #003C71;
 }
 
 .order-details-header h3 {
@@ -114,6 +133,23 @@
 
 .order-num, .address {
     margin: 16px 5%;
-    border: 1px solid black;
     padding: 0.7rem;
+    color: #333333;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #D50032, #003C71);
+    position: relative;
+    z-index: 0;
+}
+
+.order-num::before,
+.address::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    border-radius: 7px;
+    background: #ffffff;
+    z-index: -1;
 }

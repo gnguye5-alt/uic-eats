@@ -18,7 +18,9 @@ const ViewPostGroupOrder = () => {
   };
 
   // Navigate to the OrderStatus screen when the user clicks on a group order box
-  const handleOrderBoxClick = () => {
+  const handleOrderBoxClick = (order) => {
+    localStorage.setItem('selectedLocation', JSON.stringify(order)); //NF: line added
+    localStorage.setItem('deliveryType', 'group order'); //NF: line added
     navigate("/order-status");
   };
 
@@ -83,7 +85,7 @@ const ViewPostGroupOrder = () => {
             <div
               className="order-box"
               key={index}
-              onClick={handleOrderBoxClick}
+              onClick={() => handleOrderBoxClick(order)} //NF: line modified from onClick={handleOrderBoxClick}
             >
               <div>Fees you pay:</div>
               <div>{order.miles}</div>

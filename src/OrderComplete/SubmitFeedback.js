@@ -1,3 +1,12 @@
+/**
+ * This component renders a "Rate" button used to submit delivery feedback.
+ * When clicked, it gathers the user's rating, feedback, and photo,
+ * and simulates a submission by logging the data.
+ * 
+ * In the future, this could send the data to a backend service.
+ * After submission, it navigates the user back to the landing page.
+ */
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +26,7 @@ const SubmitFeedback = ({ rating, feedback, photo }) => {
         //could save it to local storage
         // localStorage.setItem('deliveryFeedback', JSON.stringify(submission));
 
-        navigate('/tracking');
+        navigate('/');
     }
 
     return (

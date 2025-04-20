@@ -22,7 +22,7 @@ function App() {
           <Route path="/order-waiting" element={<OrderWaiting />} />
           <Route path="/order-status" element={<OrderStatus />} />
           <Route path="/order-confirmed" element={<OrderConfirmed />} />
-          <Route path="/tracking" element={<Tracking />} />
+          <Route path="/track-order" element={<Tracking />} />
           <Route path="/completed-order" element={<Completed />} />
           </Routes>
       </div>

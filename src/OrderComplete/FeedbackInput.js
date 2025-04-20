@@ -1,3 +1,9 @@
+/**
+ * This component loads the input section for user delivery feedback.
+ * It has a 5-star rating system, a input area for feedback, and an image upload field with a preview
+ * 
+ */
+
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faCamera } from '@fortawesome/free-solid-svg-icons';

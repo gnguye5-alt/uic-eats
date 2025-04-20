@@ -8,6 +8,8 @@ import OrderStatus from './OrderConfirmation/OrderStatus';
 import OrderConfirmed from './OrderConfirmation/OrderConfirmed';
 import Restaurant from './Landing/Restaurant';
 import ChooseRestaurant from './Landing/ChooseRestaurant';
+import Tracking from './Tracking/Tracking';
+import Completed from './OrderComplete/Completed';
 import { CartProvider } from './Landing/CartContext'; 
 
 function App() {

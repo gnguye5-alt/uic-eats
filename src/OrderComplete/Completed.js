@@ -20,7 +20,6 @@ const Completed = () => {
     const [photo, setPhoto] = useState(null);
 
     const onExit = () => {
-        console.log("here");
         // Clear stored delivery info
         localStorage.removeItem('selectedLocation');
         localStorage.removeItem('deliveryType');
@@ -28,7 +27,7 @@ const Completed = () => {
 
     return (
         <div className="completed-delivery">
-            <BackButton className="back-btn" route="/tracking" onClick={onExit}/>
+            <BackButton className="back-btn" route="/" onClick={onExit}/>
 
             <h1 className="completed-header">Successfully Delivered!</h1>
             <div className="delivery-icon">

@@ -20,7 +20,7 @@ const TrackingStatus = ({ deliveryType }) => {
         useEffect(() => {
             //get how much time it will take to complete order
             const increment = 34;
-            const intervalDuration = 1_000_000; //10000 is 10s
+            const intervalDuration = 10_000; //10000 is 10s
             //ceil rounds up to integer
             const numUpdates = Math.ceil(100 / increment);
             const totalTime = numUpdates * intervalDuration;

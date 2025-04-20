@@ -13,7 +13,8 @@ This document is a temporary file that will show all the recent changes I made i
 4. [LockBodyScroll.js](#lockbodyscrolljs)  
 5. [Tracking.css](#trackingcss)  
 6. [Tracking.js](#trackingjs)  
-7. [Completed.js](#completedjs)  
+7. [TrackingStatus.js](#trackingstatusjs)
+8. [Completed.js](#completedjs)  
 
 ---
 
@@ -54,8 +55,13 @@ This document is a temporary file that will show all the recent changes I made i
 
 ---
 
+## TrackingStatus.js
+- Changed interval time to _10s_ for testing purposes
+
+---
+
 ## Completed.js
-- Added an `onExit` function (**lines 22–28**) that removes data from `localStorage` when the user:
+- Added an `onExit` function (**lines 22–26**) that removes data from `localStorage` when the user:
   - Clicks the back button
   - Submits their delivery feedback
 - Behavior is also described in `BackButton.js`.

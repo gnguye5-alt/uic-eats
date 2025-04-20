@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard'; // ✅ Make sure path is correct
 import './TopBar.css'; //sdad
+import { Link } from 'react-router-dom'; // Import Link for navigation
+
 const TopBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -40,6 +42,9 @@ const TopBar = () => {
         <button className="group-order-button" onClick={() => navigate('/group-order')}>
           Group ordering
         </button>
+        <div className="cta-buttons">
+        <Link to="/checkout" className="cta-button">Order Now</Link>
+        </div>
       </div>
 
       <div className="search-container">

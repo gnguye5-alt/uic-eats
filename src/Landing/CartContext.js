@@ -4,7 +4,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [currentRestaurantId, setCurrentRestaurantId] = useState(null); // 🔥 Track current restaurant
+  const [currentRestaurantId, setCurrentRestaurantId] = useState(null); // Track current restaurant
 
   // Load from localStorage on first load
   useEffect(() => {

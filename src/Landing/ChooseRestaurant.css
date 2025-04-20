@@ -9,7 +9,7 @@
     padding: 1.5rem 1rem;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    margin: -1.5rem -1.5rem 0rem -1.5rem;
 }
 
 .back-button {
@@ -17,24 +17,24 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(0.6rem, 2vw, 1.2rem);
     font-size: clamp(0.85rem, 2.5vw, 1rem);
     cursor: pointer;
-    color: #003C71;
+    color: white;
     transition: all 0.2s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .back-button:hover {
-    background-color: white;
+    background: transparent;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px) translateY(-50%);
 }
 
-.restaurant-name {
+.choose-restaurant {
     font-size: clamp(1.3rem, 4vw, 1.5rem);
     font-weight: bold;
     text-align: center;
@@ -42,7 +42,7 @@
     max-width: 100%;
     padding: 0 2.5rem;
     box-sizing: border-box;
-    color: white;
+    color: #003C71;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

@@ -17,6 +17,7 @@
   justify-content: center;
   gap: 20px;
   text-align: center;
+  color: #0085AD;
 }
 
 .status-text {
@@ -27,6 +28,11 @@
 .status-actions {
   display: flex;
   justify-content: center;
+}
+
+.status-actions div:first-child {
+  background-color: #41B6E6; 
+  color: white;
 }
 
 

@@ -30,3 +30,13 @@
   gap: 15px;
 }
 
+.action-buttons div:first-child {
+  background-color: #D50032; /* Red color for "No" */
+  color: white;
+}
+
+.action-buttons div:last-child {
+  background-color: #41B6E6; /* Blue color for "Yes" */
+  color: white;
+}
+

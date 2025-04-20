@@ -112,6 +112,9 @@
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 2px 4px rgba(213, 0, 50, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rate-btn:hover {

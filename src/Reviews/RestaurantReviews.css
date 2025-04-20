@@ -1,0 +1,155 @@
+/* RestaurantReviews.css */
+
+.review-page {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+  background: linear-gradient(135deg, #003C71 0%, #D50032 100%);
+  padding: 1.5rem 1rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+.back-button {
+  position: absolute; 
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: clamp(0.3rem, 1.2vw, 0.6rem) clamp(0.6rem, 2vw, 1.2rem);
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px) translateY(-50%);
+}
+
+.restaurant-title {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-bar label {
+  font-weight: 500;
+  color: #003C71;
+}
+
+.filter-bar select {
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  color: #003C71;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-bar select:focus {
+  outline: none;
+  border-color: #D50032;
+  box-shadow: 0 2px 4px rgba(213, 0, 50, 0.1);
+}
+
+.review-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-card strong {
+  font-size: 1rem;
+  color: #003C71;
+}
+
+.review-card .star-rating {
+  font-size: 1.1rem;
+  color: #f9a825;
+  margin: 0.5rem 0;
+}
+
+.review-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.review-photos {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.review-photos img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.review-photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .filter-bar {
+    padding: 0.8rem;
+  }
+  
+  .review-card {
+    padding: 1rem;
+  }
+}

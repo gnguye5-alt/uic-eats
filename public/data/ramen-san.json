@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Tonkotsu Ramen",
+      "description": "Pork broth with chashu pork, scallions, egg, garlic oil, and nori.",
+      "price": 14.99,
+      "category": "Ramen",
+      "likes": 119,
+      "votes": 135,
+      "image": "/images/menu/ramen-tonkotsu.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Shoyu Ramen",
+      "description": "Soy-based broth with sliced pork, bamboo shoots, and egg.",
+      "price": 13.99,
+      "category": "Ramen",
+      "likes": 103,
+      "votes": 118,
+      "image": "/images/menu/ramen-shoyu.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Spicy Miso Ramen",
+      "description": "Spicy miso broth with minced pork, corn, green onions, and chili oil.",
+      "price": 14.49,
+      "category": "Ramen",
+      "likes": 111,
+      "votes": 127,
+      "image": "/images/menu/ramen-spicy-miso.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Pork Buns (2pc)",
+      "description": "Steamed buns filled with tender pork belly, cucumber, and hoisin sauce.",
+      "price": 6.99,
+      "category": "Appetizers",
+      "likes": 92,
+      "votes": 105,
+      "image": "/images/menu/ramen-pork-buns.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Matcha Soft Serve",
+      "description": "Creamy matcha-flavored soft serve dessert.",
+      "price": 4.99,
+      "category": "Desserts",
+      "likes": 79,
+      "votes": 90,
+      "image": "/images/menu/ramen-matcha.jpg"
+    }
+  ]
+  

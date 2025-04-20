@@ -8,18 +8,26 @@ import './Landing.css';
 const Landing = () => {
   const [activeFood, setActiveFood] = useState("Fast food");
   const [activeCriteria, setActiveCriteria] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div className="landing-page">
-      <TopBar />
+      <TopBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> {/* ✅ search bar */}
+      
       <Filters 
         activeFood={activeFood}
         setActiveFood={setActiveFood}
         activeCriteria={activeCriteria}
         setActiveCriteria={setActiveCriteria}
       />
+
       <GroupOrders />
-      <Restaurants activeFood={activeFood} activeCriteria={activeCriteria} />
+
+      <Restaurants 
+        activeFood={activeFood}
+        activeCriteria={activeCriteria}
+        searchTerm={searchTerm} // ✅ pass to Restaurants
+      />
     </div>
   );
 };

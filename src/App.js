@@ -6,14 +6,14 @@ import PostConfirmation from './OrderConfirmation/PostConfirmation';
 import OrderWaiting from './OrderConfirmation/OrderWaiting';
 import OrderStatus from './OrderConfirmation/OrderStatus';
 import OrderConfirmed from './OrderConfirmation/OrderConfirmed';
-import Tracking from './Tracking/Tracking';
-import Completed from './OrderComplete/Completed';
-import './App.css';
+import Restaurant from './Landing/Restaurant';
+import ChooseRestaurant from './Landing/ChooseRestaurant';
+import { CartProvider } from './Landing/CartContext'; 
 
 function App() {
   return (
-    <Router>
-      <div className="app">
+    <CartProvider>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> {/* temporary usage forq testing */}
@@ -22,11 +22,11 @@ function App() {
           <Route path="/order-waiting" element={<OrderWaiting />} />
           <Route path="/order-status" element={<OrderStatus />} />
           <Route path="/order-confirmed" element={<OrderConfirmed />} />
-          <Route path="/tracking" element={<Tracking />} />
-          <Route path="/completed-order" element={<Completed />} />
-          </Routes>
-      </div>
-    </Router>
+            <Route path="/restaurant/:id" element={<Restaurant />} />
+          <Route path="/group-order" element={<ChooseRestaurant />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 

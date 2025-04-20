@@ -89,7 +89,7 @@ const Restaurant = () => {
     return (
         <div className="landing-page">
             <div className="restaurant-header">
-                <button className="back-button" onClick={() => navigate(-1)}>←
+                <button className="back-button" onClick={() => navigate(-1)}>
                     <span className="back-text">Back</span>
                 </button>
                 <h2 className="restaurant-name">{restaurant.name}</h2>

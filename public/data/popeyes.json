@@ -7,7 +7,7 @@
       "category": "Sandwiches",
       "likes": 123,
       "votes": 141,
-      "image": "/images/menu/popeyes-spicy-sandwich.jpg"
+      "image": "/images/menu/spicy-chicken.avif"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "category": "Sandwiches",
       "likes": 108,
       "votes": 130,
-      "image": "/images/menu/popeyes-classic-sandwich.jpg"
+      "image": "/images/menu/classic-chicken.avif"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "category": "Chicken",
       "likes": 97,
       "votes": 112,
-      "image": "/images/menu/popeyes-2pc-chicken.jpg"
+      "image": "/images/menu/signature-chicken.avif"
     },
     {
       "id": 4,
@@ -37,7 +37,7 @@
       "category": "Sides",
       "likes": 83,
       "votes": 96,
-      "image": "/images/menu/popeyes-mashed.jpg"
+      "image": "/images/menu/mashed-potato.avif"
     },
     {
       "id": 5,
@@ -47,7 +47,7 @@
       "category": "Sides",
       "likes": 78,
       "votes": 89,
-      "image": "/images/menu/popeyes-fries.jpg"
+      "image": "/images/menu/cajun-fries.avif"
     }
   ]
   

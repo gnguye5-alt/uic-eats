@@ -57,16 +57,19 @@ const RestaurantReviews = () => {
         if (found) setRestaurant(found);
       });
 
-    // Load reviews from localStorage
-    const loadReviews = () => {
-      const localReviews = JSON.parse(localStorage.getItem(`reviews-${id}`) || '[]');
-      if (localReviews.length > 0) {
-        setReviews(localReviews);
-      } else {
-        // Load fallback reviews if no local reviews exist
-        loadFallbackReviews(id).then(fallbackReviews => {
-          setReviews(fallbackReviews);
-        });
+    const loadReviews = async () => {
+      try {
+        const local = JSON.parse(localStorage.getItem(`reviews-${id}`));
+        if (local && Array.isArray(local)) {
+          setReviews(local);
+        } else {
+          const fallback = await loadFallbackReviews(id);
+          setReviews(fallback);
+          localStorage.setItem(`reviews-${id}`, JSON.stringify(fallback));
+        }
+      } catch (err) {
+        console.error("Error loading reviews:", err);
+        setReviews([]);
       }
     };
 
@@ -81,7 +84,7 @@ const RestaurantReviews = () => {
 
   const sortedReviews = [...filteredReviews].sort((a, b) => {
     if (sort === "Highest Rated") return b.rating - a.rating;
-    return new Date(b.timestamp) - new Date(a.timestamp);
+    return b.id - a.id;
   });
 
   if (!restaurant) return <div>Loading...</div>;

@@ -8,10 +8,10 @@ import OrderStatus from './OrderConfirmation/OrderStatus';
 import OrderConfirmed from './OrderConfirmation/OrderConfirmed';
 import Restaurant from './Landing/Restaurant';
 import ChooseRestaurant from './Landing/ChooseRestaurant';
-import { CartProvider } from './Landing/CartContext'; 
-import DishReviews from './Reviews/DishReviews'; 
 import Tracking from './Tracking/Tracking';
 import Completed from './OrderComplete/Completed';
+import { CartProvider } from './Landing/CartContext'; 
+import DishReviews from './Reviews/DishReviews'; 
 import RestaurantReviews from './Reviews/RestaurantReviews'; 
 
 
@@ -27,13 +27,15 @@ function App() {
           <Route path="/order-waiting" element={<OrderWaiting />} />
           <Route path="/order-status" element={<OrderStatus />} />
           <Route path="/order-confirmed" element={<OrderConfirmed />} />
-            <Route path="/restaurant/:id" element={<Restaurant />} />
+          <Route path="/restaurant/:id" element={<Restaurant />} />
           <Route path="/group-order" element={<ChooseRestaurant />} />
           <Route path="/track-order" element={<Tracking />} />
           <Route path="/completed-order" element={<Completed />} />
           <Route path="/restaurant/:restaurantId/reviews" element={<RestaurantReviews />} />
           <Route path="/restaurant/:restaurantId/dish/:dishId/reviews" element={<DishReviews />} />
 
+          <Route path="/track-order" element={<Tracking />} />
+          <Route path="/completed-order" element={<Completed />} />
         </Routes>
       </Router>
     </CartProvider>

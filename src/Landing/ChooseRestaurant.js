@@ -21,9 +21,9 @@ const ChooseRestaurant = () => {
     <div className="landing-page">
       {/* Header with Back Button and Title */}
       <div className="restaurant-header">
-        <button className="back-button" onClick={() => navigate(-1)}>← Back</button>
+        <button className="back-button" onClick={() => navigate(-1)}>Back</button>
       </div>
-      <h2 className="restaurant-name">Choose a restaurant to start group ordering</h2>
+      <h2 className="choose-restaurant">Choose a restaurant to start group ordering</h2>
 
       {/* Search Input */}
       <div className="search-wrapper">

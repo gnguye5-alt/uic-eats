@@ -1,53 +1,63 @@
 [
     {
       "id": 1,
-      "name": "Classic Milk Tea",
-      "description": "Smooth black tea with creamy milk and brown sugar boba.",
-      "price": 5.25,
+      "name": "Brown Sugar Assam Black Milk Tea",
+      "description": "Our classic Assam Black Milk Tea drizzled with thick brown sugar syrup for velvety sweetness. No toppings included.",
+      "price": 5.50,
       "category": "Milk Tea",
-      "likes": 98,
-      "votes": 112,
-      "image": "/images/menu/gathers-milk-tea.jpg"
+      "likes": 106,
+      "votes": 120,
+      "image": "/images/menu/brown-sugar.webp"
     },
     {
       "id": 2,
-      "name": "Taro Milk Tea",
-      "description": "Purple taro root blended with milk for a rich and nutty flavor.",
-      "price": 5.75,
-      "category": "Milk Tea",
-      "likes": 91,
-      "votes": 106,
-      "image": "/images/menu/gathers-taro.jpg"
+      "name": "Mango Matcha Cream",
+      "description": "Matcha cream topper with tropical mango. Choice of whole or oat milk. Contains dairy.",
+      "price": 7.50,
+      "category": "Matcha",
+      "likes": 93,
+      "votes": 108,
+      "image": "/images/menu/mango-cream.webp"
     },
     {
       "id": 3,
-      "name": "Strawberry Green Tea",
-      "description": "Green tea shaken with strawberry syrup and real fruit bits.",
-      "price": 5.50,
-      "category": "Fruit Tea",
-      "likes": 84,
-      "votes": 97,
-      "image": "/images/menu/gathers-strawberry-green.jpg"
+      "name": "Strawberry Matcha Cream",
+      "description": "Uji matcha blended with strawberry jam and spring matcha cream. Contains dairy.",
+      "price": 7.50,
+      "category": "Matcha",
+      "likes": 88,
+      "votes": 99,
+      "image": "/images/menu/strawberry-cream.webp"
     },
     {
       "id": 4,
-      "name": "Mango Yakult",
-      "description": "Tropical mango juice mixed with probiotic Yakult yogurt drink.",
-      "price": 5.99,
+      "name": "Banana Milk",
+      "description": "Fresh banana puree with spiced rum caramel and milk. Alcohol is cooked off. Contains dairy.",
+      "price": 6.00,
       "category": "Specialty Drinks",
-      "likes": 89,
-      "votes": 103,
-      "image": "/images/menu/gathers-mango-yakult.jpg"
+      "likes": 85,
+      "votes": 91,
+      "image": "/images/menu/banana-milk.webp"
     },
     {
       "id": 5,
-      "name": "Lychee Jelly Refresher",
-      "description": "Iced lychee green tea with lychee jelly and aloe vera.",
-      "price": 5.75,
-      "category": "Fruit Tea",
-      "likes": 77,
-      "votes": 88,
-      "image": "/images/menu/gathers-lychee.jpg"
+      "name": "Mango Matcha Latte",
+      "description": "Uji Matcha with mango syrup and bits. Choice of whole or oat milk.",
+      "price": 6.50,
+      "category": "Matcha",
+      "likes": 90,
+      "votes": 102,
+      "image": "/images/menu/mango-latte.webp"
+    },
+    {
+      "id": 6,
+      "name": "Strawberry Matcha Latte",
+      "description": "Whisked matcha with strawberry jam and housemade compote, finished with your choice of whole or oat milk.",
+      "price": 6.50,
+      "category": "Matcha",
+      "likes": 88,
+      "votes": 95,
+      "image": "/images/menu/strawberry-latte.webp"
     }
   ]
   

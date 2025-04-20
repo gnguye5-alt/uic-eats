@@ -18,8 +18,8 @@ const DishReviews = () => {
         const restaurant = restaurants.find(r => r.id === parseInt(restaurantId));
         if (!restaurant) return;
   
-        const menuFile = restaurant.menuFile;
-        const baseName = menuFile.replace('.json', '');
+        const menuFile = restaurant.menuFile; // e.g., jarabe.json
+        const baseName = menuFile.replace('.json', ''); // e.g., jarabe
   
         // 2. Load that restaurant's menu
         fetch(`/data/${menuFile}`)
@@ -29,23 +29,14 @@ const DishReviews = () => {
             if (dish) setDish(dish);
           });
   
-        // 3. Load reviews from localStorage
-        const loadReviews = () => {
-          const localReviews = JSON.parse(localStorage.getItem(`dish-reviews-${restaurantId}-${dishId}`) || '[]');
-          if (localReviews.length > 0) {
-            setReviews(localReviews);
-          } else {
-            // Load fallback reviews if no local reviews exist
-            fetch(`/data/Reviews/${baseName}-reviews.json`)
-              .then(res => res.json())
-              .then(data => {
-                const found = data.find(entry => entry.dish_id === parseInt(dishId));
-                setReviews(found?.reviews || []);
-              });
-          }
-        };
-
-        loadReviews();
+        // 3. Load the corresponding reviews JSON
+        fetch(`/data/Reviews/${baseName}-reviews.json`)
+          .then(res => res.json())
+          .then(data => {
+            const found = data.find(entry => entry.dish_id === parseInt(dishId));
+            setReviews(found?.reviews || []);
+          });
+          
       });
   }, [dishId, restaurantId]);
   
@@ -63,10 +54,10 @@ const DishReviews = () => {
       <h3>Reviews</h3>
       {reviews.length > 0 ? (
         reviews.map((review, idx) => (
-          <div key={review.id || idx} className="review-item">
+          <div key={idx} className="review-item">
             <div className="review-user">{review.user}</div>
             <div className="review-stars">{'\u2B50'.repeat(review.rating)}</div>
-            <p className="review-text">{review.comment}</p>
+            <p className="review-text">{review.text}</p>
           </div>
         ))
       ) : (

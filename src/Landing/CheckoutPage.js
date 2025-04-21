@@ -190,11 +190,6 @@ const CheckoutPage = () => {
       return;
     }
 
-    if (activeTab === 'Group order') {
-      navigate('/view-post-group-order');
-      return;
-    }
-
     setProcessing(true);
     
     localStorage.setItem('deliveryType', activeTab.toLowerCase());
@@ -221,6 +216,11 @@ const CheckoutPage = () => {
     const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
     localStorage.setItem('orderNumber', orderNum);
     console.log("Generated order number:", orderNum);
+
+    if (activeTab === 'Group order') {
+      navigate('/view-post-group-order');
+      return;
+    }
     
     // Simulate order processing
     setTimeout(() => {

@@ -411,7 +411,7 @@ const CheckoutPage = () => {
         />
       )}
 
-      {/* Summary Section */}
+      {/* Summary Section
       <div className="checkout-summary">
         <h3>Order Summary</h3>
         <div className="summary-item">
@@ -438,7 +438,7 @@ const CheckoutPage = () => {
           <span>Total</span>
           <span>${finalTotal}</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

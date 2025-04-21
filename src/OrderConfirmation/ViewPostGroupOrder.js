@@ -12,15 +12,15 @@ const ViewPostGroupOrder = () => {
   const [locationLoading, set_loc_load] = useState(true);
   const [groupOrders, set_group_order] = useState([]);
 
-  // Navigate to the PostConfirmation screen when the user clicks on the post group order box (this is just temporary for testing)
+  // Navigate to the PostConfirmation screen when the user clicks on the post group order box
   const handlePostGroupOrder = () => {
     navigate("/post-confirmation");
   };
 
   // Navigate to the OrderStatus screen when the user clicks on a group order box
   const handleOrderBoxClick = (order) => {
-    localStorage.setItem('selectedLocation', JSON.stringify(order)); //NF: line added
-    localStorage.setItem('deliveryType', 'group order'); //NF: line added
+    localStorage.setItem('selectedLocation', JSON.stringify(order));
+    localStorage.setItem('deliveryType', 'group order');
     navigate("/order-status");
   };
 
@@ -70,40 +70,41 @@ const ViewPostGroupOrder = () => {
   }, []);
 
   return (
-    <div className="confirmation-container">
-      <div className="back-button" onClick={() => navigate(-1)}>
-        Back
+    <div className="view-post-group-order">
+      <div className="page-header">
+        <button className="back-button" onClick={() => navigate(-1)}>Back</button>
+        <h2 className="page-title">Current Active Group Order</h2>
       </div>
 
-      <h2 className="page-title">Current Active Group Order</h2>
-
-      {locationLoading ? (
-        <div className="loading-indicator">Distance away...</div>
-      ) : (
-        <div className="order-boxes-wrapper">
-          {groupOrders.map((order, index) => (
-            <div
-              className="order-box"
-              key={index}
-              onClick={() => handleOrderBoxClick(order)} //NF: line modified from onClick={handleOrderBoxClick}
-            >
-              <div>Fees you pay:</div>
-              <div>{order.miles}</div>
-              <div className="order-address">
-                Address: <br />
-                {order.name}
-                <br />
-                {order.address}
+      <div className="content-container">
+        {locationLoading ? (
+          <div className="loading-indicator">Distance away...</div>
+        ) : (
+          <div className="order-boxes-wrapper">
+            {groupOrders.map((order, index) => (
+              <div
+                className="order-box"
+                key={index}
+                onClick={() => handleOrderBoxClick(order)}
+              >
+                <div className="order-fees">Fees you pay:</div>
+                <div className="order-distance">{order.miles}</div>
+                <div className="order-address">
+                  <span className="address-label">Address:</span>
+                  <span className="location-name">{order.name}</span>
+                  <span className="location-address">{order.address}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
+
+        <div className="alt-option-section">
+          <h3 className="alt-option-text">Not the group you want?</h3>
+          <div className="post-box" onClick={handlePostGroupOrder}>
+            Post group order so others can join!
+          </div>
         </div>
-      )}
-
-      <h3 className="alt-option-text">Not the group you want?</h3>
-
-      <div className="post-box" onClick={handlePostGroupOrder}>
-        Post group order so others can join!
       </div>
     </div>
   );

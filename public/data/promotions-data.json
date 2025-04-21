@@ -1,0 +1,73 @@
+[
+    {
+      "id": "promo1",
+      "code": "WELCOME10",
+      "discount": 0.1,
+      "description": "10% off your first order",
+      "minAmount": 0,
+      "active": true,
+      "expiryDate": "2025-12-31"
+    },
+    {
+      "id": "promo2",
+      "code": "MEAL15",
+      "discount": 0.15,
+      "description": "15% off orders over $20",
+      "minAmount": 20,
+      "active": true,
+      "expiryDate": "2025-08-31"
+    },
+    {
+      "id": "promo3",
+      "code": "FREE_DELIVERY",
+      "discount": 0,
+      "description": "Free delivery on orders over $30",
+      "minAmount": 30,
+      "type": "free_delivery",
+      "active": true,
+      "expiryDate": "2025-06-30"
+    },
+    {
+      "id": "promo4",
+      "code": "UIC25",
+      "discount": 0.25,
+      "description": "Student discount: 25% off your order",
+      "minAmount": 15,
+      "active": true,
+      "expiryDate": "2025-12-31"
+    },
+    {
+      "id": "promo5",
+      "code": "MONDAY5",
+      "discount": 5,
+      "description": "Monday special: $5 off your order",
+      "minAmount": 20,
+      "type": "fixed_amount",
+      "active": true,
+      "expiryDate": "2025-12-31",
+      "daysOfWeek": [1]
+    },
+    {
+      "id": "promo6",
+      "code": "GROUP10",
+      "discount": 0.1,
+      "description": "10% off group orders",
+      "minAmount": 30,
+      "active": true,
+      "expiryDate": "2025-12-31",
+      "requiresGroupOrder": true
+    },
+    {
+      "id": "promo7",
+      "code": "LUNCH20",
+      "discount": 0.2,
+      "description": "20% off lunch orders (11am-2pm)",
+      "minAmount": 15,
+      "active": true,
+      "expiryDate": "2025-12-31",
+      "timeRestriction": {
+        "start": "11:00",
+        "end": "14:00"
+      }
+    }
+  ]

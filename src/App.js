@@ -23,7 +23,7 @@ function App() {
       <CartProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<Landing />} />
+            {/* <Route path="/" element={<Landing />} /> */}
             <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> {/* temporary usage forq testing */}
             <Route path="/" element={<ViewPostGroupOrder />} />
             <Route path="/post-confirmation" element={<PostConfirmation />} />
@@ -31,14 +31,14 @@ function App() {
             <Route path="/order-status" element={<OrderStatus />} />
             <Route path="/order-confirmed" element={<OrderConfirmed />} />
           <Route path="/restaurant/:id" element={<Restaurant />} />
+          <Route path="/restaurant/:restaurantId/dish/:dishId/reviews" element={<DishReviews />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+        
             <Route path="/group-order" element={<ChooseRestaurant />} />
             <Route path="/track-order" element={<Tracking />} />
           <Route path="/completed-order" element={<Completed />} />
           <Route path="/restaurant/:restaurantId/reviews" element={<RestaurantReviews />} />
-            <Route path="/restaurant/:restaurantId/dish/:dishId/reviews" element={<DishReviews />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/track-order" element={<Tracking />} />
-          <Route path="/completed-order" element={<Completed />} />
+         
         </Routes>
         </Router>
       </CartProvider>

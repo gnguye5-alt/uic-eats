@@ -1,0 +1,39 @@
+[
+    {
+      "id": "promo1",
+      "code": "WELCOME10",
+      "description": "10% off your first order",
+      "type": "percent_discount",
+      "value": 10
+    },
+    {
+      "id": "promo2",
+      "code": "FREESHIP",
+      "description": "Free delivery on orders over $20",
+      "type": "free_delivery",
+      "minOrderValue": 20
+    },
+    {
+      "id": "promo3",
+      "code": "SPRING25",
+      "description": "25% off select items (spring collection)",
+      "type": "percent_discount",
+      "value": 25,
+      "categoryRestriction": "spring_collection"
+    },
+    {
+      "id": "promo4",
+      "code": "5BUCKS",
+      "description": "$5 off orders over $30",
+      "type": "flat_discount",
+      "value": 5,
+      "minOrderValue": 30
+    },
+    {
+      "id": "promo5",
+      "code": "BOGO50",
+      "description": "Buy one, get one 50% off",
+      "type": "bogo",
+      "value": 50
+    }
+  ]

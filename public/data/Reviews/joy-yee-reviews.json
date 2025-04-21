@@ -1,0 +1,82 @@
+[
+  {
+    "dish_id": 1,
+    "dish_name": "Pad See Ew",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Pad! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Pad See Ew was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 2,
+    "dish_name": "Beef Cubes Over Tomato Sauce Rice",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Beef! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Beef Cubes Over Tomato Sauce Rice was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 3,
+    "dish_name": "Korean BBQ Short Ribs",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Korean! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Korean BBQ Short Ribs was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 4,
+    "dish_name": "Tropical Mango Freeze",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Tropical! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Tropical Mango Freeze was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 5,
+    "dish_name": "Lychee Green Tea",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Lychee! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Lychee Green Tea was excellent! Highly recommended."
+      }
+    ]
+  }
+]

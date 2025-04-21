@@ -18,7 +18,6 @@ const Completed = () => {
     const [rating, setRating] = useState(0);
     const [feedback, setFeedback] = useState('');
     const [photo, setPhoto] = useState(null);
-
     const onExit = () => {
         // Clear stored delivery info
         localStorage.removeItem('selectedLocation');

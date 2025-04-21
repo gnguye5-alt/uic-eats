@@ -1,0 +1,82 @@
+[
+  {
+    "dish_id": 1,
+    "dish_name": "Belly Classic Banh Mi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Belly! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Belly Classic Banh Mi was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 2,
+    "dish_name": "Honey Grilled Pork Banh Mi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Honey! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Honey Grilled Pork Banh Mi was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 3,
+    "dish_name": "Ginger Chicken Banh Mi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Ginger! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Ginger Chicken Banh Mi was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 4,
+    "dish_name": "Sunny-Side Beef Banh Mi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Sunny-Side! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Sunny-Side Beef Banh Mi was excellent! Highly recommended."
+      }
+    ]
+  },
+  {
+    "dish_id": 5,
+    "dish_name": "Veggiecado Banh Mi",
+    "reviews": [
+      {
+        "user": "Student A",
+        "rating": 4,
+        "text": "I liked the Veggiecado! Very satisfying."
+      },
+      {
+        "user": "Student B",
+        "rating": 5,
+        "text": "Veggiecado Banh Mi was excellent! Highly recommended."
+      }
+    ]
+  }
+]

@@ -48,17 +48,17 @@ const Restaurant = () => {
     //     const totalRating = stats.rating * stats.reviews;
     //     const newReviews = stats.reviews + 1;
     //     const newAvgRating = (totalRating + newRating) / newReviews;
-      
+
     //     const updatedStats = {
     //       rating: parseFloat(newAvgRating.toFixed(1)),
     //       reviews: newReviews
     //     };
-      
+
     //     localStorage.setItem(
     //       `restaurant-${restaurant.id}-reviews`,
     //       JSON.stringify(updatedStats)
     //     );
-      
+
     //     // optional: re-render
     //     setRestaurant((prev) => ({
     //       ...prev,
@@ -66,7 +66,7 @@ const Restaurant = () => {
     //       reviews: updatedStats.reviews
     //     }));
     //   };
-      
+
 
     if (!restaurant) return <div>Loading restaurant...</div>;
 
@@ -100,10 +100,15 @@ const Restaurant = () => {
             {(() => {
                 const { rating, reviews } = getRestaurantStats(restaurant.id);
                 return (
-                    <p className="restaurant-meta">
-                    {rating} ⭐ ({reviews} <span className="reviews-label">reviews</span>) • {restaurant.distance}
-                  </p>
-                  
+                    <p
+                        className="restaurant-meta"
+                        onClick={() => navigate(`/restaurant/${restaurant.id}/reviews`)}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        {rating} ⭐ (<span className="reviews-label">{reviews} reviews</span>) • {restaurant.distance}
+                    </p>
+
+
                 );
             })()}
 
@@ -146,7 +151,10 @@ const Restaurant = () => {
                                         >
                                             Add to Cart
                                         </button>
-                                        <button>See reviews</button>
+                                        <button onClick={() => navigate(`/restaurant/${restaurant.id}/dish/${item.id}/reviews`)}>
+                                            See reviews
+                                        </button>
+
                                     </div>
                                 </div>
                             ))

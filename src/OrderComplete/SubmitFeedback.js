@@ -6,29 +6,38 @@
  * In the future, this could send the data to a backend service.
  * After submission, it navigates the user back to the landing page.
  */
-
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const SubmitFeedback = ({ rating, feedback, photo }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+
+    // Extract restaurantId from previous page state or URL
+    const restaurantId = new URLSearchParams(location.search).get("restaurantId");
 
     const handleSubmit = () => {
 
         const submission = {
+            id: Date.now(),  // unique id
+            user: "You",     // or use logged-in user if available
             rating,
-            feedback,
-            photo: photo || null
+            comment: feedback,
+            photos: photo ? [photo] : []
         };
 
-        // would need to sent submission to backend
-        // so we will just log it on the console
-        console.log("Submission JSON: ", submission);
-        //could save it to local storage
-        // localStorage.setItem('deliveryFeedback', JSON.stringify(submission));
+        if (restaurantId) {
+            const key = `reviews-${restaurantId}`;
+            const existing = JSON.parse(localStorage.getItem(key)) || [];
+            const updated = [submission, ...existing];  // newest first
+            localStorage.setItem(key, JSON.stringify(updated));
+            console.log(`Saved to localStorage under ${key}`, updated);
+        } else {
+            console.warn("Missing restaurantId! Feedback not saved.");
+        }
 
         navigate('/');
-    }
+    };
 
     return (
         <div submit-feedback-constainer>

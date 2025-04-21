@@ -14,6 +14,7 @@ const SubmitFeedback = ({ rating, feedback, photo }) => {
     const navigate = useNavigate();
 
     const handleSubmit = () => {
+
         const submission = {
             rating,
             feedback,
@@ -30,13 +31,20 @@ const SubmitFeedback = ({ rating, feedback, photo }) => {
     }
 
     return (
-        <button 
-            className="rate-btn" 
-            onClick={handleSubmit}
-            disabled={rating === 0}
-        >
-            Rate
-        </button>
+        <div submit-feedback-constainer>
+            {rating === 0 && (
+                <p className="rating-reminder">
+                    A star rating is required to submit feedback.
+                </p>
+            )}
+            <button 
+                className="rate-btn" 
+                onClick={handleSubmit}
+                disabled={rating === 0}
+            >
+                Rate
+            </button>
+        </div>
     );
 };
 

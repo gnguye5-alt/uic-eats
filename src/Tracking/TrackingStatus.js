@@ -70,6 +70,7 @@ const TrackingStatus = ({ deliveryType }) => {
                     style={{ width: `${progress}%` }}
                 ></div>
             </div>
+            <p className="wait-message">You'll be redirected to leave a review once your order is complete.</p>
         </div>
     );
 };

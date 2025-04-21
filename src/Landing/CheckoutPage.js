@@ -83,11 +83,12 @@ const CheckoutPage = () => {
   const [displayedPromoCode, setDisplayedPromoCode] = useState('');
   
   // Calculate cart totals using CartContext
-  const { subtotal, tax, deliveryFee, serviceFee, total } = getCartTotals();
+  const { subtotal, tax, serviceFee } = getCartTotals();
+  const deliveryFee = activeTab === 'Delivery' ? 2.99 : 0;
   
   // Calculate discounted total
   const discount = calculateDiscount(subtotal.toFixed(2));
-  const finalTotal = (total - parseFloat(discount)).toFixed(2);
+  const finalTotal = (parseFloat(subtotal) + parseFloat(tax) + parseFloat(serviceFee) + deliveryFee - parseFloat(discount)).toFixed(2);
   
   // Handle empty cart redirect
   useEffect(() => {
@@ -409,6 +410,35 @@ const CheckoutPage = () => {
           orderType={activeTab}
         />
       )}
+
+      {/* Summary Section */}
+      <div className="checkout-summary">
+        <h3>Order Summary</h3>
+        <div className="summary-item">
+          <span>Subtotal</span>
+          <span>${subtotal.toFixed(2)}</span>
+        </div>
+        <div className="summary-item">
+          <span>Tax</span>
+          <span>${tax.toFixed(2)}</span>
+        </div>
+        {discount > 0 && (
+          <div className="summary-item">
+            <span>Discount</span>
+            <span>-${discount.toFixed(2)}</span>
+          </div>
+        )}
+        {activeTab === 'Delivery' && (
+          <div className="summary-item">
+            <span>Delivery Fee</span>
+            <span>${deliveryFee.toFixed(2)}</span>
+          </div>
+        )}
+        <div className="summary-total">
+          <span>Total</span>
+          <span>${finalTotal}</span>
+        </div>
+      </div>
     </div>
   );
 };

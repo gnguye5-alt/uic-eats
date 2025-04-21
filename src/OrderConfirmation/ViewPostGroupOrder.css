@@ -14,7 +14,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .back-button {
@@ -29,7 +29,6 @@ html, body, #root {
 .confirmation-container {
     width: 100%;
     min-height: 0vh;
-    background: white;
     padding: 30px;
     display: flex; 
     flex-direction: column;
@@ -37,7 +36,18 @@ html, body, #root {
     gap: 25px;
     margin: 0 auto;
   }
-  
+
+  .post-box {
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    white-space: nowrap;
+    background-color: #41B6E6; /* Add this line to make the button white */
+  }
+
   .order-boxes-wrapper {
     display: flex;
     flex-direction: column;
@@ -50,7 +60,6 @@ html, body, #root {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      /* gap: 10px; */
     }
   }
   
@@ -69,26 +78,8 @@ html, body, #root {
     font-weight: 500;
     margin-top: 20px;
     text-align: center;
-    color: black;
+    color: #0085AD;
   }
-  
-  .post-box {
-    padding: 15px;
-    /* margin-top: 10px; */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    border: 1px solid black;
-    cursor: pointer;
-    font-size: 15px;
-    color: black;
-    white-space: nowrap; 
-  }
-
-
-.order-box {
-  cursor: pointer; 
-}
-
 
 .order-box {
   width: 100%;
@@ -109,6 +100,8 @@ html, body, #root {
   height: auto;
   overflow: hidden; 
   box-sizing: border-box; 
+  background-color: #FFBF3F;
+  cursor: pointer; 
 }
 
 

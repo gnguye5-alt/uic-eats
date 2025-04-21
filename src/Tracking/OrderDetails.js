@@ -1,8 +1,18 @@
+/**
+ * This component displays key information about a specific order. This 
+ * includes:
+ * - The order number
+ * - Whether it's a Pickup, Delivery, or Group Order
+ * - The delivery or pickup address
+ * 
+ * It also is a draggable UI element, allowing users to expand or collapse 
+ * the order details panel by clicking and dragging or swiping.
+ */
+
 import React, {  useState } from "react";
 
-const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
-
-const OrderDetails = ({ deliveryType, selectedType }) => {
+const OrderDetails = ({ deliveryType, selectedType, orderNum }) => {
+  
     //allows order details section to be extended or minimized
     const [sheetHeight, setSheetHeight] = useState(250); // Initial height
 
@@ -39,7 +49,8 @@ const OrderDetails = ({ deliveryType, selectedType }) => {
             ></div>
             <div className="order-details-header">
                 <h2>Order Details</h2>
-                <h3>{selectedType.name}</h3>
+                <h3>{selectedType.type}</h3>
+
             </div>
             <p className="order-num">
                 Order No. 

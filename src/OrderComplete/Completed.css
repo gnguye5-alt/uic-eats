@@ -1,3 +1,7 @@
+#root {
+    background-color: #f8f9fa;
+}
+
 .completed-delivery {
     display: flex;
     flex-direction: column;
@@ -11,7 +15,7 @@
 
 .back-icon:hover, .camera:hover {
     cursor: pointer;
-    color: rgb(255, 1, 1);
+    color: #D50032;
 }
 
 .back-icon:active, .camera-icon:active {
@@ -19,6 +23,7 @@
 }
 
 .completed-header {
+    color: #003C71;
     margin-top: 6rem;
 }
 
@@ -29,6 +34,7 @@
 
 .feedback-prompt {
     font-size: 20px;
+    color: #333333;
 }
 
 .stars {
@@ -45,7 +51,7 @@
 }
 
 .filled {
-  color: #ffd700;
+  color: #FFBF3F;
 }
 
 .feedback-box {
@@ -53,6 +59,9 @@
 }
 
 .feedback-text {
+    font-family: Arial;
+    font-size: 16px;
+    padding: 0.5rem;
     width: 60%;
     height: 25vh;
     resize: none;
@@ -81,6 +90,10 @@
     cursor: pointer;
   }
 
+.photo-upload p {
+    color: #333333;
+  }
+
 .preview {
     max-height: 50px;
     object-fit: cover;
@@ -91,6 +104,22 @@
     height: 4vh;
     margin: auto;
     font-size: 18px;
+    background-color: #D50032;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(213, 0, 50, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rate-btn:hover {
+    background-color: #b3002a;
+    box-shadow: 0 4px 8px rgba(213, 0, 50, 0.3);
 }
 
 .rate-btn:disabled {

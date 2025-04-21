@@ -1,3 +1,15 @@
+/**
+ * This component renders an interactive Leaflet map that displays a marker
+ * for the delivery or pickup address using OpenStreetMap.
+ * 
+ * Converts a given address (from `selectedType.address`) into latitude and longitude 
+ * using the Nominatim OpenStreetMap API. Then it displays a Leaflet map centered on 
+ * the fetched coordinates.
+ * 
+ * There is a custom marker icon with a popup showing the delivery type and address. 
+ * The map uses a fixed zoom range and disables scroll wheel zoom for usability.
+ */
+
 import React, { useEffect, useState } from "react"
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';

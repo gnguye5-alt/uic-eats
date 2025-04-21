@@ -1,3 +1,13 @@
+/**
+ * This component displays the current progress of the order using a progress bar.
+ * It simulates an order completion timer and shows either:
+ * - "Ready By" for pickup orders
+ * - "Estimated Arrival" for delivery orders
+ * 
+ * Once the simulated progress reaches 100%, the user is automatically navigated to the
+ * completed order screen (`/completed-order`).
+ */
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +20,7 @@ const TrackingStatus = ({ deliveryType }) => {
         useEffect(() => {
             //get how much time it will take to complete order
             const increment = 34;
-            const intervalDuration = 1_000_000; //10000 is 10s
+            const intervalDuration = 15_000; //15000 is 15s
             //ceil rounds up to integer
             const numUpdates = Math.ceil(100 / increment);
             const totalTime = numUpdates * intervalDuration;

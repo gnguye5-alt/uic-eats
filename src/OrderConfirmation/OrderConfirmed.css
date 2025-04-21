@@ -29,6 +29,7 @@
   justify-content: center;
   gap: 20px;
   text-align: center;
+  color: #0085AD;
 }
 
 .confirmed-title {
@@ -47,5 +48,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
-  color: black;
+  color: white;
+  background-color: #41B6E6;
 }
+

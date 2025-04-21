@@ -274,7 +274,7 @@
   flex-shrink: 0;
 }
 
-.cart-item-img::before, .cart-item-img::after {
+/* .cart-item-img::before, .cart-item-img::after {
   content: '';
   position: absolute;
   background-color: #ccc;
@@ -282,7 +282,7 @@
   height: 1px;
   top: 50%;
   left: 9px;
-}
+} */
 
 .cart-item-img::before {
   transform: rotate(45deg);

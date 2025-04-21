@@ -222,42 +222,7 @@ const CheckoutPage = () => {
   
   return (
     <div className="checkout-page">
-      <style>
-        {`
-          .promo-code-highlight {
-            color: #3478F6;
-            font-weight: bold;
-          }
-          .checkout-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: linear-gradient(to right, #1e3a8a, #991b1b);
-            color: white;
-            padding: 15px;
-            border-radius: 0 0 10px 10px;
-          }
-          .back-button {
-            position: absolute;
-            left: 15px;
-            padding: 6px 12px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-          }
-          .back-button:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-          }
-          .checkout-title {
-            margin: 0;
-          }
-        `}
-      </style>
-
+      
       <div className="checkout-header">
         <button className="back-button" onClick={() => navigate(-1)}>Back</button>
         <h2 className="checkout-title">Checkout Page - {activeTab}</h2>

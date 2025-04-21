@@ -32,8 +32,6 @@ function App() {
             <Route path="/order-confirmed" element={<OrderConfirmed />} />
           <Route path="/restaurant/:id" element={<Restaurant />} />
             <Route path="/group-order" element={<ChooseRestaurant />} />
-            <Route path="/track-order" element={<Tracking />} />
-          <Route path="/completed-order" element={<Completed />} />
           <Route path="/restaurant/:restaurantId/reviews" element={<RestaurantReviews />} />
             <Route path="/restaurant/:restaurantId/dish/:dishId/reviews" element={<DishReviews />} />
             <Route path="/checkout" element={<CheckoutPage />} />

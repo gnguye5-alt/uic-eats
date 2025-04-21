@@ -1,98 +1,118 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 
-// Create the context
+// Create context
 export const PromotionsContext = createContext();
 
-// Create a custom hook for using the promotions context
-export const usePromotions = () => useContext(PromotionsContext);
-
+// Create provider component
 export const PromotionsProvider = ({ children }) => {
-  // Initialize state for promotions
   const [promotions, setPromotions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [appliedPromotion, setAppliedPromotion] = useState(null);
 
-  // Load promotions data from public folder
+  // Fetch promotions from JSON file
   useEffect(() => {
-    fetch('/data/promotions-data.json')
-      .then(response => response.json())
-      .then(data => {
+    const fetchPromotions = async () => {
+      try {
+        console.log('PromotionsContext: Fetching promotions...');
+        const response = await fetch('/data/promotions_data.json');
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch promotions: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('PromotionsContext: Loaded promotions:', data);
         setPromotions(data);
         setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error loading promotions data:', error);
+      } catch (error) {
+        console.error('PromotionsContext: Error fetching promotions:', error);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchPromotions();
   }, []);
 
-  // State for currently applied promotion
-  const [appliedPromotion, setAppliedPromotion] = useState(null);
-  
-  // Function to apply a promotion code
+  // Apply promotion by code
   const applyPromotion = (code) => {
-    const promo = promotions.find(p => 
-      p.code === code && p.active
-    );
+    console.log(`PromotionsContext: Applying promotion code: ${code}`);
     
-    if (promo) {
-      // Check for any time or day restrictions
-      if (promo.daysOfWeek) {
-        const today = new Date().getDay();
-        if (!promo.daysOfWeek.includes(today)) {
-          return { 
-            success: false, 
-            message: 'This promotion is only valid on specific days' 
-          };
-        }
-      }
-      
-      if (promo.timeRestriction) {
-        const now = new Date();
-        const currentTime = `${now.getHours()}:${now.getMinutes()}`;
-        if (currentTime < promo.timeRestriction.start || currentTime > promo.timeRestriction.end) {
-          return { 
-            success: false, 
-            message: `This promotion is only valid between ${promo.timeRestriction.start} and ${promo.timeRestriction.end}` 
-          };
-        }
-      }
-      
-      setAppliedPromotion(promo);
-      return { success: true, promotion: promo };
+    // Find promotion with matching code
+    const promotion = promotions.find(p => p.code === code);
+    
+    if (!promotion) {
+      console.log('PromotionsContext: No matching promotion found');
+      return { 
+        success: false, 
+        message: 'Invalid promotion code' 
+      };
     }
     
-    return { success: false, message: 'Invalid or expired promotion code' };
+    console.log('PromotionsContext: Found matching promotion:', promotion);
+    setAppliedPromotion(promotion);
+    
+    return { 
+      success: true, 
+      promotion 
+    };
   };
-  
-  // Function to clear applied promotion
+
+  // Clear applied promotion
   const clearPromotion = () => {
+    console.log('PromotionsContext: Clearing applied promotion');
     setAppliedPromotion(null);
   };
-  
-  // Calculate discount amount based on total and applied promotion
-  const calculateDiscount = (total) => {
-    if (!appliedPromotion) return 0;
-    
-    // Check minimum amount requirement
-    if (parseFloat(total) < appliedPromotion.minAmount) {
+
+  // Calculate discount based on applied promotion and order subtotal
+  const calculateDiscount = (subtotal) => {
+    if (!appliedPromotion) {
       return 0;
     }
+
+    console.log(`PromotionsContext: Calculating discount for subtotal: $${subtotal}`);
+    console.log('PromotionsContext: Applied promotion:', appliedPromotion);
     
-    // Handle special types
-    if (appliedPromotion.type === 'free_delivery') {
-      return 2.99; // Delivery fee amount
+    const subtotalValue = parseFloat(subtotal);
+    
+    switch (appliedPromotion.type) {
+      case 'percent_discount':
+        // Calculate percentage discount
+        const percentDiscount = (subtotalValue * appliedPromotion.value / 100).toFixed(2);
+        console.log(`PromotionsContext: Calculated ${appliedPromotion.value}% discount: $${percentDiscount}`);
+        return percentDiscount;
+        
+      case 'flat_discount':
+        // Check minimum order value if applicable
+        if (appliedPromotion.minOrderValue && subtotalValue < appliedPromotion.minOrderValue) {
+          console.log(`PromotionsContext: Order subtotal ($${subtotalValue}) is less than minimum required ($${appliedPromotion.minOrderValue})`);
+          return 0;
+        }
+        
+        console.log(`PromotionsContext: Applied flat discount: $${appliedPromotion.value}`);
+        return appliedPromotion.value;
+        
+      case 'free_delivery':
+        // This would be handled separately in the checkout as a line item
+        // For now, let's return a fixed delivery fee value
+        console.log('PromotionsContext: Applied free delivery discount');
+        return 2.99; // Assuming this is your delivery fee
+        
+      case 'bogo':
+        // Buy one get one at X% off (most complex case)
+        // For simplicity, we'll assume this is a cart-wide discount
+        // In a real app, you'd apply this to specific eligible items
+        const bogoDiscount = (subtotalValue * (appliedPromotion.value / 100) / 2).toFixed(2);
+        console.log(`PromotionsContext: Calculated BOGO ${appliedPromotion.value}% discount: $${bogoDiscount}`);
+        return bogoDiscount;
+        
+      default:
+        console.log('PromotionsContext: Unknown promotion type, no discount applied');
+        return 0;
     }
-    
-    if (appliedPromotion.type === 'fixed_amount') {
-      return appliedPromotion.discount; // Fixed amount discount
-    }
-    
-    // Regular percentage discount
-    return (parseFloat(total) * appliedPromotion.discount).toFixed(2);
   };
-  
-  // Context value
-  const value = {
+
+  // Create context value object
+  const contextValue = {
     promotions,
     loading,
     appliedPromotion,
@@ -100,10 +120,21 @@ export const PromotionsProvider = ({ children }) => {
     clearPromotion,
     calculateDiscount
   };
-  
+
   return (
-    <PromotionsContext.Provider value={value}>
+    <PromotionsContext.Provider value={contextValue}>
       {children}
     </PromotionsContext.Provider>
   );
+};
+
+// Custom hook for using promotions
+export const usePromotions = () => {
+  const context = useContext(PromotionsContext);
+  
+  if (!context) {
+    throw new Error('usePromotions must be used within a PromotionsProvider');
+  }
+  
+  return context;
 };

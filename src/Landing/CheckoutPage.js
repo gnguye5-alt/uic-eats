@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';
 import { usePromotions } from '../components/PromotionsContext';
 import '../components/SharedStyles.css';
-import './CheckoutPage.css'; // Import the new CSS file
-import OrderTabs from '../components/OrderTabs';
+import './CheckoutPage.css';
 import ConfirmationModal from '../components/ConfirmationModal';
 import PromotionsModal from '../components/PromotionsModal';
 
@@ -71,7 +70,7 @@ const CheckoutPage = () => {
   // States for checkout page
   const [activeTab, setActiveTab] = useState('Delivery');
   const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
-  const [pickupText, setPickupText] = useState(`Delivery to: ${locationData[0].name}`);
+  const [pickupText, setPickupText] = useState('Enter delivery address');
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [showLocationDropdown, setShowLocationDropdown] = useState(false);
@@ -84,11 +83,19 @@ const CheckoutPage = () => {
   
   // Calculate cart totals using CartContext
   const { subtotal, tax, serviceFee } = getCartTotals();
+  
+  // Set delivery fee based on active tab
   const deliveryFee = activeTab === 'Delivery' ? 2.99 : 0;
   
-  // Calculate discounted total
-  const discount = calculateDiscount(subtotal.toFixed(2));
-  const finalTotal = (parseFloat(subtotal) + parseFloat(tax) + parseFloat(serviceFee) + deliveryFee - parseFloat(discount)).toFixed(2);
+  // Calculate the total including delivery fee if applicable
+  const total = subtotal + tax + serviceFee + deliveryFee;
+  
+  // Calculate discount and final total
+  const rawDiscount = calculateDiscount(subtotal);
+  const discount = parseFloat(rawDiscount);
+  
+  // Calculate the final total with discount applied
+  const finalTotal = (total - discount).toFixed(2);
   
   // Handle empty cart redirect
   useEffect(() => {
@@ -102,7 +109,7 @@ const CheckoutPage = () => {
     setSelectedLocation(location);
     
     if (activeTab === 'Delivery') {
-      setPickupText(`Delivery to: ${location.name}`);
+      setPickupText('Enter delivery address');
     } else if (activeTab === 'Pickup') {
       setPickupText(`Pick up at: ${location.name}`);
     }
@@ -150,6 +157,7 @@ const CheckoutPage = () => {
     setPromoCode(code);
     setDisplayedPromoCode(code);
     const result = applyPromotion(code);
+    
     if (result.success) {
       setPromoMessage(`Applied: ${result.promotion.description}`);
     } else {
@@ -161,7 +169,7 @@ const CheckoutPage = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     if (tab === 'Delivery') {
-      setPickupText(`Delivery to: ${selectedLocation.name}`);
+      setPickupText('Enter delivery address');
     } else if (tab === 'Pickup') {
       setPickupText(`Pick up at: ${selectedLocation.name}`);
     } else {
@@ -206,8 +214,11 @@ const CheckoutPage = () => {
     navigate('/');
   };
 
-  // Determine back link based on restaurant ID
-  const backLink = currentRestaurantId ? `/restaurant/${currentRestaurantId}` : '/';
+  // Function to get item image with proper fallbacks
+  const getItemImage = (item) => {
+    // Simply return the image path if it exists
+    return item.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"%3E%3Crect width="60" height="60" fill="%23f0f0f0"/%3E%3Cpath d="M30 15 L45 45 L15 45 Z" fill="%23ccc"/%3E%3C/svg%3E';
+  };
   
   return (
     <div className="checkout-page">
@@ -217,11 +228,38 @@ const CheckoutPage = () => {
             color: #3478F6;
             font-weight: bold;
           }
+          .checkout-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(to right, #1e3a8a, #991b1b);
+            color: white;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+          }
+          .back-button {
+            position: absolute;
+            left: 15px;
+            padding: 6px 12px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+          }
+          .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+          }
+          .checkout-title {
+            margin: 0;
+          }
         `}
       </style>
 
       <div className="checkout-header">
-      <button className="back-button" onClick={() => navigate(-1)}>Back</button>
+        <button className="back-button" onClick={() => navigate(-1)}>Back</button>
         <h2 className="checkout-title">Checkout Page - {activeTab}</h2>
       </div>
       
@@ -235,18 +273,39 @@ const CheckoutPage = () => {
           <p>Your cart is empty.</p>
         ) : (
           <ul className="cart-list">
-            {cart.map((item, index) => (
-              <li key={index} className="cart-item">
-                <div className="cart-item-img"></div>
-                <div className="cart-item-info">
-                  <h4>{item.name}</h4>
-                  <div className="price-quantity">
-                    <p>Price: ${parseFloat(item.price).toFixed(2)}</p>
-                    <p>Quantity: {item.quantity}</p>
+            {cart.map((item, index) => {
+              const itemImage = getItemImage(item);
+              
+              return (
+                <li key={index} className="cart-item">
+                  <div className="cart-item-img">
+                    <img 
+                      src={itemImage}
+                      alt={item.name}
+                      style={{ 
+                        width: '60px', 
+                        height: '60px', 
+                        objectFit: 'cover',
+                        borderRadius: '4px'
+                      }}
+                      onError={(e) => {
+                        // If image fails to load, use a data URI placeholder
+                        e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"%3E%3Crect width="60" height="60" fill="%23f0f0f0"/%3E%3Cpath d="M15 15 L45 45 M45 15 L15 45" stroke="%23cccccc" stroke-width="2"/%3E%3C/svg%3E';
+                        // Remove the onError handler to prevent infinite loops
+                        e.target.onError = null;
+                      }}
+                    />
                   </div>
-                </div>
-              </li>
-            ))}
+                  <div className="cart-item-info">
+                    <h4>{item.name}</h4>
+                    <div className="price-quantity">
+                      <p>Price: ${parseFloat(item.price).toFixed(2)}</p>
+                      <p>Quantity: {item.quantity}</p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         )}
       </section>
@@ -261,7 +320,7 @@ const CheckoutPage = () => {
           <div>Tax: ${tax.toFixed(2)}</div>
           <div>Delivery Fee: ${deliveryFee.toFixed(2)}</div>
           <div>Service Fee: ${serviceFee.toFixed(2)}</div>
-          {parseFloat(discount) > 0 && <div>Discount: -${parseFloat(discount).toFixed(2)}</div>}
+          {discount > 0 && <div>Discount: -${discount.toFixed(2)}</div>}
           <div><strong>Total: ${finalTotal}</strong></div>
         </div>
         
@@ -275,6 +334,7 @@ const CheckoutPage = () => {
                 <span>No promotion applied</span>
               )}
             </div>
+            {promoMessage && <div className="promo-message">{promoMessage}</div>}
           </div>
           <div 
             className="view-promotions"
@@ -296,8 +356,8 @@ const CheckoutPage = () => {
           {activeTab === 'Delivery' ? (
             <input 
               type="text" 
-              value={pickupText.replace('Delivery to: ', '')}
-              onChange={(e) => setPickupText(`Delivery to: ${e.target.value}`)}
+              value={pickupText}
+              onChange={(e) => setPickupText(e.target.value)}
               placeholder="Enter delivery address"
               className="delivery-input"
               style={{
@@ -345,7 +405,6 @@ const CheckoutPage = () => {
         </div>
       </section>
       
-      {/* Order Tabs */}
       {/* Order Tabs */}
       <div className="tabs-container">
         <div className="order-tabs">

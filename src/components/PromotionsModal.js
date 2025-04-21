@@ -1,14 +1,34 @@
-import React, { useState, useContext } from 'react';
-import { PromotionsContext } from './PromotionsContext';
+import React, { useState, useEffect } from 'react';
 import './PromotionsModal.css';
 
 const PromotionsModal = ({ onClose, onApplyPromo, orderType }) => {
-  const { promotions, loading } = useContext(PromotionsContext);
+  const [promotions, setPromotions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'code'
   const [searchQuery, setSearchQuery] = useState('');
   const [promoCode, setPromoCode] = useState('');
   const [selectedPromotion, setSelectedPromotion] = useState(null);
   
+  // Fetch promotions from JSON file
+  useEffect(() => {
+    const fetchPromotions = async () => {
+      try {
+        const response = await fetch('/data/promotions_data.json');
+        if (!response.ok) {
+          throw new Error('Failed to fetch promotions');
+        }
+        const data = await response.json();
+        setPromotions(data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching promotions:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchPromotions();
+  }, []);
+
   // Filter promotions based on search query and order type
   const filteredPromotions = promotions.filter(promo => {
     // Basic text search filtering

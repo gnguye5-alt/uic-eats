@@ -24,7 +24,7 @@ function App() {
         <Router>
           <Routes>
             {/* <Route path="/" element={<Landing />} /> */}
-            <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> {/* temporary usage forq testing */}
+            {/* <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> temporary usage forq testing */}
             <Route path="/" element={<ViewPostGroupOrder />} />
             <Route path="/post-confirmation" element={<PostConfirmation />} />
             <Route path="/order-waiting" element={<OrderWaiting />} />
@@ -32,8 +32,7 @@ function App() {
             <Route path="/order-confirmed" element={<OrderConfirmed />} />
           <Route path="/restaurant/:id" element={<Restaurant />} />
           <Route path="/restaurant/:restaurantId/dish/:dishId/reviews" element={<DishReviews />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-        
+            <Route path="/checkout" element={<CheckoutPage />} />  
             <Route path="/group-order" element={<ChooseRestaurant />} />
             <Route path="/track-order" element={<Tracking />} />
           <Route path="/completed-order" element={<Completed />} />

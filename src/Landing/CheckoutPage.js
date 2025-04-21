@@ -416,19 +416,6 @@ const CheckoutPage = () => {
       <button 
         className="place-order-button" 
         onClick={handlePlaceOrder}
-        style={{
-          backgroundColor: '#3478F6',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          padding: '12px 24px',
-          fontSize: '16px',
-          fontWeight: '500',
-          cursor: 'pointer',
-          textAlign: 'center',
-          margin: '20px auto',
-          display: 'block'
-        }}
       >
         {processing ? "Processing..." : "Place order"}
       </button>

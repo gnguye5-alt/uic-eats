@@ -18,16 +18,23 @@ const OrderStatus = () => {
   };
 
   return (
-    <div className="status-container">
-      <div className="back-button" onClick={() => navigate(-1)}>Back</div>
+    <div className="landing-page">
+      <div className="confirmation-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <span className="back-text">Back</span>
+        </button>
+        <h2 className="page-title">Order Status</h2>
+      </div>
 
-      <div className="status-content">
-        <div className="status-text">
-          There are 2 people in your order
-        </div>
+      <div className="status-container">
+        <div className="status-content">
+          <div className="status-text">
+            There are 2 people in your order
+          </div>
 
-        <div className="status-actions">
-          <div className="action-button" onClick={handleContinue}>Continue</div>
+          <div className="status-actions">
+            <div className="action-button" onClick={handleContinue}>Continue</div>
+          </div>
         </div>
       </div>
     </div>

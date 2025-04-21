@@ -19,39 +19,28 @@ const CartModal = ({ onClose }) => {
   };
 
   return (
-    <div className="cart-modal-backdrop" onClick={(e) => e.target.className === 'cart-modal-backdrop' && onClose()}>
+    <div className="cart-modal-backdrop">
       <div className="cart-modal">
-        <button onClick={onClose} className="close-btn">×</button>
         <h3>Your Cart</h3>
         {cart.length === 0 ? (
-          <p className="empty-cart-message">Your cart is empty</p>
+          <p>Your cart is empty.</p>
         ) : (
           <>
             <ul className="cart-items">
               {cart.map((item, index) => (
                 <li key={index}>
-                  <span className="item-name">
-                    {item.name} × {item.quantity}
-                  </span>
-                  <span className="item-price">
-                    ${(item.price * item.quantity).toFixed(2)}
-                  </span>
+                  {item.name} × {item.quantity} — ${(item.price * item.quantity).toFixed(2)}
                 </li>
               ))}
             </ul>
-            <div className="cart-total">
-              Total: ${total}
-            </div>
+            <div className="cart-total">Total: ${total}</div>
             <div className="cart-actions">
-              <button onClick={clearCart} className="clear-btn">
-                Clear Cart
-              </button>
-              <button onClick={handleCheckout} className="checkout-btn">
-                Checkout
-              </button>
+              <button onClick={clearCart} className="clear-btn">Clear Cart</button>
+              <button onClick={handleCheckout} className="checkout-btn">Proceed to Checkout</button>
             </div>
           </>
         )}
+        <button onClick={onClose} className="close-btn">×</button>
       </div>
     </div>
   );

@@ -24,8 +24,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Landing />} />
-            {/* <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> temporary usage forq testing */}
-            <Route path="/" element={<ViewPostGroupOrder />} />
+            <Route path="/view-post-group-order" element={<ViewPostGroupOrder />} /> temporary usage forq testing
+            {/* <Route path="/" element={<ViewPostGroupOrder />} /> */}
             <Route path="/post-confirmation" element={<PostConfirmation />} />
             <Route path="/order-waiting" element={<OrderWaiting />} />
             <Route path="/order-status" element={<OrderStatus />} />

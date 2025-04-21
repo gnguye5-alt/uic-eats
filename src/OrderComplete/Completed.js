@@ -21,6 +21,7 @@ const Completed = () => {
         // Clear stored delivery info
         localStorage.removeItem('selectedLocation');
         localStorage.removeItem('deliveryType');
+        localStorage.removeItem('orderNumber');
     }
 
     return (

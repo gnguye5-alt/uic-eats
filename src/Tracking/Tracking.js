@@ -28,7 +28,7 @@ const displayNames = {
     'group order': 'Group Order',
   };
 
-const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
+const orderNum = localStorage.getItem('orderNumber');
 
 const Tracking = () => {
     LockBodyScroll();

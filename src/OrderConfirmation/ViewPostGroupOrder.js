@@ -70,12 +70,13 @@ const ViewPostGroupOrder = () => {
   }, []);
 
   return (
-    <div className="confirmation-container">
-      <div className="back-button" onClick={() => navigate(-1)}>
-        Back
+    <div className="landing-page">
+      <div className="confirmation-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <span className="back-text">Back</span>
+        </button>
+        <h2 className="page-title">Current Active Group Order</h2>
       </div>
-
-      <h2 className="page-title">Current Active Group Order</h2>
 
       {locationLoading ? (
         <div className="loading-indicator">Distance away...</div>
@@ -85,7 +86,7 @@ const ViewPostGroupOrder = () => {
             <div
               className="order-box"
               key={index}
-              onClick={() => handleOrderBoxClick(order)} //NF: line modified from onClick={handleOrderBoxClick}
+              onClick={() => handleOrderBoxClick(order)}
             >
               <div>Fees you pay:</div>
               <div>{order.miles}</div>

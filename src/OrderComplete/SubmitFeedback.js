@@ -17,6 +17,7 @@ const SubmitFeedback = ({ rating, feedback, photo }) => {
     const restaurantId = new URLSearchParams(location.search).get("restaurantId");
 
     const handleSubmit = () => {
+
         const submission = {
             id: Date.now(),  // unique id
             user: "You",     // or use logged-in user if available
@@ -39,13 +40,20 @@ const SubmitFeedback = ({ rating, feedback, photo }) => {
     };
 
     return (
-        <button 
-            className="rate-btn" 
-            onClick={handleSubmit}
-            disabled={rating === 0}
-        >
-            Rate
-        </button>
+        <div submit-feedback-constainer>
+            {rating === 0 && (
+                <p className="rating-reminder">
+                    A star rating is required to submit feedback.
+                </p>
+            )}
+            <button 
+                className="rate-btn" 
+                onClick={handleSubmit}
+                disabled={rating === 0}
+            >
+                Rate
+            </button>
+        </div>
     );
 };
 

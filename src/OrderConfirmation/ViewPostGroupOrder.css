@@ -17,13 +17,52 @@ html, body, #root {
   background-color: #ffffff;
 }
 
+.confirmation-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+  background: linear-gradient(135deg, #003C71 0%, #D50032 100%);
+  padding: 1.5rem 1rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
 .back-button {
+  position: absolute; 
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  color: black;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px) translateY(-50%);
+}
+
+.back-button .back-text {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 5px;
+    left: 0.8rem;
+  }
 }
 
 .confirmation-container {
@@ -35,51 +74,70 @@ html, body, #root {
     align-items: center;
     gap: 25px;
     margin: 0 auto;
-  }
+    max-width: 1200px;
+}
 
-  .post-box {
-    padding: 15px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    color: white;
-    white-space: nowrap;
-    background-color: #41B6E6; /* Add this line to make the button white */
-  }
+.post-box {
+  padding: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  white-space: nowrap;
+  background-color: #41B6E6;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
 
+.post-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.order-boxes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
   .order-boxes-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  @media (min-width: 768px) {
-    .order-boxes-wrapper {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-  
+}
+
+.page-title {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
   .page-title {
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    text-align: center;
-    margin-top: 50px;
-    width: 100%;
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    padding: 0 1.5rem;
   }
-  
-  
-  .alt-option-text {
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 20px;
-    text-align: center;
-    color: #0085AD;
-  }
+}
+
+.alt-option-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+  color: #0085AD;
+}
 
 .order-box {
   width: 100%;

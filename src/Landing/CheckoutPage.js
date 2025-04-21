@@ -4,7 +4,6 @@ import { CartContext } from './CartContext';
 import { usePromotions } from '../components/PromotionsContext';
 import '../components/SharedStyles.css';
 import './CheckoutPage.css';
-import ConfirmationModal from '../components/ConfirmationModal';
 import PromotionsModal from '../components/PromotionsModal';
 
 // UIC Campus locations
@@ -71,7 +70,6 @@ const CheckoutPage = () => {
   const [activeTab, setActiveTab] = useState('Delivery');
   const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
   const [pickupText, setPickupText] = useState('Enter delivery address');
-  const [showConfirmation, setShowConfirmation] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [showLocationDropdown, setShowLocationDropdown] = useState(false);
   
@@ -191,27 +189,47 @@ const CheckoutPage = () => {
       alert('Please add items to your cart before placing an order');
       return;
     }
-    
+
+    if (activeTab === 'Group order') {
+      navigate('/view-post-group-order');
+      return;
+    }
+
     setProcessing(true);
+    
+    localStorage.setItem('deliveryType', activeTab.toLowerCase());
+
+    // Prepare location data based on delivery type
+    const locationToSave = activeTab === 'Delivery'
+      ? {
+          name: "Custom Address",
+          address: pickupText || "Enter delivery address",
+          lat: 41.8717,
+          lng: -87.6471
+        }
+      : selectedLocation;
+    
+    // Save location to localStorage
+    try {
+      localStorage.setItem('selectedLocation', JSON.stringify(locationToSave));
+      console.log("Saved location:", locationToSave);
+    } catch (e) {
+      console.error("Error saving location to localStorage:", e);
+    }
+    
+    // Generate and save order number
+    const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
+    localStorage.setItem('orderNumber', orderNum);
+    console.log("Generated order number:", orderNum);
     
     // Simulate order processing
     setTimeout(() => {
       setProcessing(false);
-      setShowConfirmation(true);
+      
+      // Navigate directly to tracking page
+      console.log("Navigating to tracking page");
+      navigate('/track-order');
     }, 1500);
-  };
-  
-  // Confirmation close handler
-  const handleConfirmationClose = () => {
-    setShowConfirmation(false);
-    // !! TODO: FIX
-    // Clear cart and promos after successful order
-    // clearCart();
-    // clearPromotion();
-    // setDisplayedPromoCode('');
-    // setPromoCode('');
-    // Navigate to home
-    navigate('/');
   };
 
   // Function to get item image with proper fallbacks
@@ -222,42 +240,7 @@ const CheckoutPage = () => {
   
   return (
     <div className="checkout-page">
-      <style>
-        {`
-          .promo-code-highlight {
-            color: #3478F6;
-            font-weight: bold;
-          }
-          .checkout-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: linear-gradient(to right, #1e3a8a, #991b1b);
-            color: white;
-            padding: 15px;
-            border-radius: 0 0 10px 10px;
-          }
-          .back-button {
-            position: absolute;
-            left: 15px;
-            padding: 6px 12px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-          }
-          .back-button:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-          }
-          .checkout-title {
-            margin: 0;
-          }
-        `}
-      </style>
-
+      
       <div className="checkout-header">
         <button className="back-button" onClick={() => navigate(-1)}>Back</button>
         <h2 className="checkout-title">Checkout Page - {activeTab}</h2>
@@ -433,33 +416,9 @@ const CheckoutPage = () => {
       <button 
         className="place-order-button" 
         onClick={handlePlaceOrder}
-        style={{
-          backgroundColor: '#3478F6',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          padding: '12px 24px',
-          fontSize: '16px',
-          fontWeight: '500',
-          cursor: 'pointer',
-          textAlign: 'center',
-          margin: '20px auto',
-          display: 'block'
-        }}
       >
-        Place order
+        {processing ? "Processing..." : "Place order"}
       </button>
-      
-      {/* Confirmation Modal */}
-      {showConfirmation && (
-        <ConfirmationModal 
-          show={true}
-          onClose={handleConfirmationClose}
-          total={finalTotal}
-          deliveryMethod={activeTab}
-          deliveryDetails={pickupText}
-        />
-      )}
       
       {/* Promotions Modal */}
       {showPromotionsModal && (

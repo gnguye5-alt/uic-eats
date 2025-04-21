@@ -25,17 +25,21 @@ const PostConfirmation = () => {
   };
 
   return (
-    <div className="post-confirmation-container">
-      <div className="back-button" onClick={back_clicked}>Back</div>
-      
-      <div className="confirmation-content">
-        <div className="confirmation-text">
-          Do you want to post this order?
-        </div>
+    <div className="landing-page">
+      <div className="confirmation-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <span className="back-text">Back</span>
+        </button>
+        <h2 className="page-title">Post Confirmation</h2>
+      </div>
 
-        <div className="confirmation-actions">
-          <div className="action-button" onClick={no_clicked}>No</div>
-          <div className="action-button" onClick={yes_clicked}>Yes</div>
+      <div className="post-confirmation-container">
+        <div className="confirmation-content">
+          <div className="confirmation-text">Do you want to post this order?</div>
+          <div className="confirmation-actions">
+            <div onClick={no_clicked}>No</div>
+            <div onClick={yes_clicked}>Yes</div>
+          </div>
         </div>
       </div>
     </div>

@@ -7,36 +7,189 @@
 .post-confirmation-container {
   display: flex;
   flex-direction: column;
-  min-height: 700px;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .confirmation-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
   text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .confirmation-text {
-  font-size: 20px;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
   font-weight: 500;
+  color: #003C71;
 }
 
 .confirmation-actions {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
 }
 
-/* Add these two rules to your existing CSS */
+.confirmation-actions div {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-actions div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .confirmation-actions div:first-child {
-  background-color: #D50032; /* Red color for "No" */
+  background-color: #D50032;
   color: white;
 }
 
 .confirmation-actions div:last-child {
-  background-color: #41B6E6; /* Blue color for "Yes" */
+  background-color: #41B6E6;
   color: white;
+}
+
+/* Post Confirmation Page Styling */
+.landing-page {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-height: 100vh;
+}
+
+.confirmation-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0;
+  background: linear-gradient(135deg, #003C71 0%, #D50032 100%);
+  padding: 1.5rem 1rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+.back-button {
+  position: absolute; 
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px) translateY(-50%);
+}
+
+.back-button .back-text {
+  display: inline;
+}
+
+.page-title {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 480px) {
+  .landing-page {
+    padding: 1rem;
+  }
+
+  .confirmation-header {
+    padding: 1rem;
+    margin: -1rem -1rem 1rem -1rem;
+  }
+
+  .back-button {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 5px;
+    left: 0.8rem;
+  }
+
+  .page-title {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    padding: 0 1.5rem;
+  }
+
+  .post-confirmation-container {
+    padding: 1rem;
+    min-height: calc(100vh - 160px);
+  }
+
+  .confirmation-content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .confirmation-text {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+  }
+
+  .confirmation-actions {
+    gap: 0.8rem;
+  }
+
+  .confirmation-actions div {
+    padding: 0.7rem 1.2rem;
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 360px) {
+  .confirmation-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .confirmation-actions div {
+    width: 100%;
+    padding: 0.8rem;
+  }
 }

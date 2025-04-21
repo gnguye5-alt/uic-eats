@@ -65,7 +65,7 @@
 }
 
 .progress-bar {
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
     background-color: #dddddd;
     height: 1rem;
     border-radius: 3px;
@@ -75,6 +75,13 @@
     height: 100%;
     background-color: #0085AD;
 }
+
+.wait-message {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #888;
+    margin: 0 0 0.5rem 0;
+  }
 
 /* MAP SECTION */
 .Map-Container {
@@ -152,4 +159,11 @@
     border-radius: 7px;
     background: #ffffff;
     z-index: -1;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 854px) {
+    .wait-message {
+        font-size: 0.70rem;
+    }
 }

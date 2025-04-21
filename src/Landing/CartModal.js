@@ -40,7 +40,7 @@ const CartModal = ({ onClose }) => {
             </div>
           </>
         )}
-        <button onClick={onClose} className="close-btn">Close</button>
+        <button onClick={onClose} className="close-btn">×</button>
       </div>
     </div>
   );

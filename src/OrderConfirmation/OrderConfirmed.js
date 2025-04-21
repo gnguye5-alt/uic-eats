@@ -22,15 +22,21 @@ const OrderConfirmed = () => {
   };
 
   return (
-    <div className="confirmed-container">
-      <div className="close-button" onClick={close_clicked}>×</div>
+    <div className="landing-page">
+      <div className="confirmation-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <span className="back-text">Back</span>
+        </button>
+        <h2 className="page-title">Order Confirmed</h2>
+      </div>
 
-      <div className="confirmed-content">
-        <h1 className="confirmed-title">Order Confirmed!</h1>
-
-        <div className="confirmed-actions">
-          <div className="action-button" onClick={track_clicked}>
-            Track Order
+      <div className="confirmed-container">
+        <div className="confirmed-content">
+          <div className="confirmed-title">Your order has been confirmed!</div>
+          <div className="confirmed-actions">
+            <div className="action-button" onClick={track_clicked}>
+              Track Order
+            </div>
           </div>
         </div>
       </div>

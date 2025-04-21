@@ -24,17 +24,21 @@ const OrderWaiting = () => {
   };
 
   return (
-    <div className="waiting-container">
-      <div className="back-button" onClick={() => navigate(-1)}>Back</div>
+    <div className="landing-page">
+      <div className="confirmation-header">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <span className="back-text">Back</span>
+        </button>
+        <h2 className="page-title">Waiting for Orders</h2>
+      </div>
 
-      <div className="waiting-content">
-        <div className="waiting-text">
-          Waiting for people to join your order...
-        </div>
-
-        <div className="action-buttons">
-          <div className="action-button" onClick={cancel_clicked}>Cancel</div>
-          <div className="action-button" onClick={lock_clicked}>Lock order</div>
+      <div className="waiting-container">
+        <div className="waiting-content">
+          <div className="waiting-text">Waiting for people to join...</div>
+          <div className="action-buttons">
+            <div onClick={cancel_clicked}>Cancel</div>
+            <div onClick={lock_clicked}>Lock Order</div>
+          </div>
         </div>
       </div>
     </div>

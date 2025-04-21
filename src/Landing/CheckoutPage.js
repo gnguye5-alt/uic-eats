@@ -191,7 +191,12 @@ const CheckoutPage = () => {
       alert('Please add items to your cart before placing an order');
       return;
     }
-    
+
+    if (activeTab === 'Group order') {
+      navigate('/view-post-group-order');
+      return;
+    }
+
     setProcessing(true);
     
     // Simulate order processing

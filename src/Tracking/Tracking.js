@@ -28,10 +28,12 @@ const displayNames = {
     'group order': 'Group Order',
   };
 
-const orderNum = localStorage.getItem('orderNumber');
 
 const Tracking = () => {
     LockBodyScroll();
+
+    // Retrieve the order number from localStorage
+    const orderNum = localStorage.getItem('orderNumber');
 
     // Retrieve the delivery type from localStorage (default to 'pickup' if not found)
     const deliveryType = localStorage.getItem('deliveryType') ?? 'pickup'

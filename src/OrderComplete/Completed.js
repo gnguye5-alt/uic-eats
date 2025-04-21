@@ -14,6 +14,7 @@ import LockBodyScroll from "../hooks/LockBodyScroll";
 
 const Completed = () => {
     LockBodyScroll();
+
     const [rating, setRating] = useState(0);
     const [feedback, setFeedback] = useState('');
     const [photo, setPhoto] = useState(null);
@@ -27,6 +28,7 @@ const Completed = () => {
     return (
         <div className="completed-delivery">
             <BackButton className="back-btn" route="/" onClick={onExit}/>
+
             <h1 className="completed-header">Successfully Delivered!</h1>
             <div className="delivery-icon">
                 <img src={"/images/delivery.png"} className="delivery-image"/>

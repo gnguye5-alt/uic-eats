@@ -12,7 +12,6 @@
 import React, {  useState } from "react";
 
 const OrderDetails = ({ deliveryType, selectedType, orderNum }) => {
-  
     //allows order details section to be extended or minimized
     const [sheetHeight, setSheetHeight] = useState(250); // Initial height
 
@@ -50,7 +49,6 @@ const OrderDetails = ({ deliveryType, selectedType, orderNum }) => {
             <div className="order-details-header">
                 <h2>Order Details</h2>
                 <h3>{selectedType.type}</h3>
-
             </div>
             <p className="order-num">
                 Order No. 

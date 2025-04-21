@@ -24,7 +24,7 @@
 
 .completed-header {
     color: #003C71;
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 
 .delivery-image {
@@ -63,7 +63,7 @@
     font-size: 16px;
     padding: 0.5rem;
     width: 60%;
-    height: 25vh;
+    height: 20vh;
     resize: none;
 }
 
@@ -73,7 +73,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 
 .camera {
@@ -117,6 +117,13 @@
     align-items: center;
 }
 
+.rating-reminder {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #888;
+    margin: 0 0 0.2rem 0;
+}
+
 .rate-btn:hover {
     background-color: #b3002a;
     box-shadow: 0 4px 8px rgba(213, 0, 50, 0.3);
@@ -133,7 +140,7 @@
     }
 
     .feedback-text {
-        width: 50%;
+        width: 40%;
     }
 
     .rate-btn {
@@ -141,6 +148,7 @@
     }
 }
 
+/* Desktop Screen */
 @media screen and (min-width: 1250px) {
     .delivery-image {
         width: 7%;

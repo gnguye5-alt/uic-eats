@@ -4,7 +4,6 @@ import { CartContext } from './CartContext';
 import { usePromotions } from '../components/PromotionsContext';
 import '../components/SharedStyles.css';
 import './CheckoutPage.css';
-import ConfirmationModal from '../components/ConfirmationModal';
 import PromotionsModal from '../components/PromotionsModal';
 
 // UIC Campus locations
@@ -71,7 +70,6 @@ const CheckoutPage = () => {
   const [activeTab, setActiveTab] = useState('Delivery');
   const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
   const [pickupText, setPickupText] = useState('Enter delivery address');
-  const [showConfirmation, setShowConfirmation] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [showLocationDropdown, setShowLocationDropdown] = useState(false);
   
@@ -199,24 +197,39 @@ const CheckoutPage = () => {
 
     setProcessing(true);
     
+    localStorage.setItem('deliveryType', activeTab.toLowerCase());
+
+    // Prepare location data based on delivery type
+    const locationToSave = activeTab === 'Delivery'
+      ? {
+          name: "Custom Address",
+          address: pickupText || "Enter delivery address",
+          lat: 41.8717,
+          lng: -87.6471
+        }
+      : selectedLocation;
+    
+    // Save location to localStorage
+    try {
+      localStorage.setItem('selectedLocation', JSON.stringify(locationToSave));
+      console.log("Saved location:", locationToSave);
+    } catch (e) {
+      console.error("Error saving location to localStorage:", e);
+    }
+    
+    // Generate and save order number
+    const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
+    localStorage.setItem('orderNumber', orderNum);
+    console.log("Generated order number:", orderNum);
+    
     // Simulate order processing
     setTimeout(() => {
       setProcessing(false);
-      setShowConfirmation(true);
+      
+      // Navigate directly to tracking page
+      console.log("Navigating to tracking page");
+      navigate('/track-order');
     }, 1500);
-  };
-  
-  // Confirmation close handler
-  const handleConfirmationClose = () => {
-    setShowConfirmation(false);
-    // !! TODO: FIX
-    // Clear cart and promos after successful order
-    // clearCart();
-    // clearPromotion();
-    // setDisplayedPromoCode('');
-    // setPromoCode('');
-    // Navigate to home
-    navigate('/');
   };
 
   // Function to get item image with proper fallbacks
@@ -417,19 +430,8 @@ const CheckoutPage = () => {
           display: 'block'
         }}
       >
-        Place order
+        {processing ? "Processing..." : "Place order"}
       </button>
-      
-      {/* Confirmation Modal */}
-      {showConfirmation && (
-        <ConfirmationModal 
-          show={true}
-          onClose={handleConfirmationClose}
-          total={finalTotal}
-          deliveryMethod={activeTab}
-          deliveryDetails={pickupText}
-        />
-      )}
       
       {/* Promotions Modal */}
       {showPromotionsModal && (

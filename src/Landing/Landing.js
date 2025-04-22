@@ -21,7 +21,7 @@ const Landing = () => {
         setActiveCriteria={setActiveCriteria}
       />
 
-      <GroupOrders />
+      {/* <GroupOrders /> */}
 
       <Restaurants 
         activeFood={activeFood}

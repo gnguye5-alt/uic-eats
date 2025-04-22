@@ -7,7 +7,7 @@
       "category": "Ramen",
       "likes": 119,
       "votes": 135,
-      "image": "/images/menu/ramen-tonkotsu.jpg"
+      "image": "/images/menu/tonkotsu.avif"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
       "category": "Ramen",
       "likes": 103,
       "votes": 118,
-      "image": "/images/menu/ramen-shoyu.jpg"
+      "image": "/images/menu/shio.avif"
     },
     {
       "id": 3,
@@ -27,7 +27,7 @@
       "category": "Ramen",
       "likes": 111,
       "votes": 127,
-      "image": "/images/menu/ramen-spicy-miso.jpg"
+      "image": "/images/menu/miso.avif"
     },
     {
       "id": 4,
@@ -37,17 +37,17 @@
       "category": "Appetizers",
       "likes": 92,
       "votes": 105,
-      "image": "/images/menu/ramen-pork-buns.jpg"
+      "image": "/images/menu/buns.avif"
     },
     {
       "id": 5,
-      "name": "Matcha Soft Serve",
-      "description": "Creamy matcha-flavored soft serve dessert.",
-      "price": 4.99,
+      "name": "Matcha Puffs (2pc)",
+      "description": "Creamy matcha-flavored puffs.",
+      "price": 7.00,
       "category": "Desserts",
       "likes": 79,
       "votes": 90,
-      "image": "/images/menu/ramen-matcha.jpg"
+      "image": "/images/menu/choux.avif"
     }
   ]
-  
+ 

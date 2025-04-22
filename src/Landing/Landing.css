@@ -114,10 +114,6 @@ html, body, #root {
     color: white;
 }
 
-.filter-button:hover {
-    background-color: #f8f9fa;
-}
-
 /* Section */
 .section {
     width: 100%;

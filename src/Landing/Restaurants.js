@@ -6,7 +6,7 @@
 
 import React, { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
-import './Restaurants.css';
+
 const Restaurants = ({ activeFood, activeCriteria }) => {
   const [restaurants, setRestaurants] = useState([]);
 

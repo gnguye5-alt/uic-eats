@@ -1,3 +1,9 @@
+/**
+ * This stylesheet defines the styles for the checkout page.
+ * It styles sections like the checkout form, cart item list, order summary, 
+ * promotions, delivery address input, and provides responsive adjustments.
+ */
+
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext';

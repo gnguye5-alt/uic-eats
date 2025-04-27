@@ -1,6 +1,12 @@
+/**
+ * This component fetches and displays a list of featured restaurants.
+ * It applies filtering based on active food categories and criteria, 
+ * and renders the matching restaurants in a responsive grid layout.
+ */
+
 import React, { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
-
+import './Restaurants.css';
 const Restaurants = ({ activeFood, activeCriteria }) => {
   const [restaurants, setRestaurants] = useState([]);
 

@@ -1,3 +1,9 @@
+/**
+ * This component renders a compact card view of a restaurant.
+ * It displays restaurant image, name, categories, distance, and tags, 
+ * and allows navigation to the restaurant's detailed page on click.
+ */
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 

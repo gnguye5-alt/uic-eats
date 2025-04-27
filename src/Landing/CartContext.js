@@ -1,3 +1,9 @@
+/**
+ * This context provides global cart management across the app.
+ * It handles adding items, clearing the cart, persisting cart data in localStorage, 
+ * and calculating subtotal, tax, service fee, and delivery fee.
+ */
+
 import React, { createContext, useState, useEffect } from 'react';
 
 export const CartContext = createContext();

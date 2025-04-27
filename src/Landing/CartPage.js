@@ -1,3 +1,9 @@
+/**
+ * This component displays the full cart page view.
+ * It shows a detailed list of cart items with images, quantity, prices, 
+ * and provides buttons to clear the cart or proceed to checkout.
+ */
+
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import { useNavigate } from 'react-router-dom';

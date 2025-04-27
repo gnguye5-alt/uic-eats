@@ -1,3 +1,10 @@
+
+/**
+ * This stylesheet defines the styles for the checkout page.
+ * It styles sections like the checkout form, cart item list, order summary, 
+ * promotions, delivery address input, and provides responsive adjustments.
+ */
+
 .checkout-page {
   padding: 1.5rem;
   background-color: #f8f9fa;

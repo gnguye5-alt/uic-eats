@@ -1,3 +1,9 @@
+/**
+ * This stylesheet defines the layout and styling for the Landing page.
+ * It styles the top navigation bar, filters, group order section, 
+ * restaurant cards, and handles responsiveness for mobile, tablet, and desktop views.
+ */
+
 html, body, #root {
     margin: 0;
     padding: 0;

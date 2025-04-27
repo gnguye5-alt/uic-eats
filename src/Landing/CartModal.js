@@ -1,3 +1,9 @@
+/**
+ * This component displays a modal popup showing the user's cart summary.
+ * It allows users to review items, clear the cart, or proceed to checkout, 
+ * and closes when clicking the backdrop or the close button.
+ */
+
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import { useNavigate } from 'react-router-dom';

@@ -1,3 +1,9 @@
+/**
+ * This stylesheet defines the styles for the cart modal popup.
+ * It includes modal backdrop styling, cart item list layout, action buttons, 
+ * and responsive adjustments for smaller devices.
+ */
+
 .cart-modal-backdrop {
     position: fixed;
     top: 0;
@@ -10,7 +16,7 @@
     align-items: center;
     z-index: 1000;
   }
-  
+ 
   .cart-modal {
     background: white;
     padding: 1.5rem;

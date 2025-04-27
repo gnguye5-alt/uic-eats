@@ -1,5 +1,10 @@
 
-/* === Top Bar === */
+/**
+ * This stylesheet defines the layout and styling for the TopBar component.
+ * It styles the logo, group order button, search input field, and dropdown 
+ * search results with responsive design considerations.
+ */
+
 .top-bar {
     display: flex;
     flex-direction: column;

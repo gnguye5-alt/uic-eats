@@ -1,3 +1,9 @@
+/**
+ * This component provides filter buttons for food categories and criteria.
+ * It allows users to dynamically filter restaurants based on food type (e.g., Fast Food) 
+ * or criteria (e.g., Cheap, Fast) by toggling active states.
+ */
+
 import React from 'react';
 
 const foodOptions = ["Fast food", "Chinese", "Thai", "Snacks", "Bubble Tea"];

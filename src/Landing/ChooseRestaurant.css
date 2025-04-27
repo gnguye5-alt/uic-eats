@@ -1,3 +1,9 @@
+/**
+ * This stylesheet defines the styles for the ChooseRestaurant page.
+ * It includes styling for the back button, page title, search bar, restaurant grid, 
+ * restaurant cards, and responsive adjustments for different screen sizes.
+ */
+
 /* === Header with Back Button and Title === */
 .restaurant-header {
     display: flex;

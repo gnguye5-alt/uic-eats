@@ -1,3 +1,9 @@
+/**
+ * This component displays a list of restaurants users can choose from to start a group order.
+ * It fetches restaurant data, provides a search functionality to filter results, 
+ * and allows users to navigate to a specific restaurant’s page.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ChooseRestaurant.css';
@@ -16,7 +22,7 @@ const ChooseRestaurant = () => {
   const filtered = restaurants.filter(r =>
     r.name.toLowerCase().includes(search.toLowerCase())
   );
-
+  
   return (
     <div className="landing-page">
       {/* Header with Back Button and Title */}

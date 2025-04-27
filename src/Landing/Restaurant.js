@@ -1,3 +1,8 @@
+/**
+ * This component displays a detailed view of a selected restaurant.
+ * It fetches restaurant and menu data, handles adding items to the cart, 
+ * shows student picks, supports tab switching (Menu/Info), and integrates with the cart modal.
+ */
 
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';

@@ -1,3 +1,9 @@
+/**
+ * This component is the landing page of the app.
+ * It includes the TopBar, Filters, and a list of Restaurants, 
+ * managing states for active food type, criteria filters, and search terms.
+ */
+
 import React, { useState } from 'react';
 import TopBar from './TopBar';
 import Filters from './Filters';

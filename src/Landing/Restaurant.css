@@ -1,3 +1,8 @@
+/**
+ * This stylesheet defines the visual styles for the Restaurant detail page.
+ * It styles the header, restaurant meta information, tabs, student picks section,
+ * menu items, view cart button, and ensures responsiveness across different devices.
+ */
 /* Page container */
 .landing-page {
     padding: 1.5rem;

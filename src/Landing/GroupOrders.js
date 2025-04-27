@@ -1,3 +1,9 @@
+/**
+ * This component displays a list of active group orders.
+ * Users can browse and join existing group orders by clicking on a card,
+ * which redirects them to the respective restaurant's page.
+ */
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,3 +1,9 @@
+/**
+ * This component displays the top navigation bar including the app logo, 
+ * a group ordering button, and a search input with live dropdown results.
+ * It allows users to search for restaurants or cuisines and navigate to restaurant pages.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard'; // ✅ Make sure path is correct
@@ -7,7 +13,7 @@ const TopBar = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     fetch('/data/restaurants.json')
       .then(res => res.json())

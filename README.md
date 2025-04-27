@@ -8,9 +8,15 @@ We also added the automatic calculation for fees and any added promotions in the
 Reviews Pages
 - The reviews page was modified when displaying all reviews for a particular restaraunt. The filter displays based on quantity of stars and not based on specifc food items as we have added a review section for each item individually. 
 
+Active Group Orders:
+- The active group orders have been removed from the original landing page.
+
 ## How to run
--npm start on computer
--using mobile device on local network : type in link displayed in terminal
+In the project directory, you can run:
+npm start, it will run the app in the development mode.
+If you're testing on your phone, copy the local server URL (e.g., http://192.168.x.x:3000) and open it in your phone’s browser. Make sure your phone and laptop are connected to the same Wi-Fi network.
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
 References in no particualr order FIX:
 -https://dev.to/sofiajonsson/image-relative-path-in-react-3fci

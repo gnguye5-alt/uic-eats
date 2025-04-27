@@ -116,6 +116,7 @@ const CheckoutPage = () => {
   };
   
   // Handle promo code application
+  // eslint-disable-next-line
   const handleApplyPromo = () => {
     if (!promoCode.trim()) {
       setPromoMessage('Please enter a promotion code');

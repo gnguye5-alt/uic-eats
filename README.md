@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+## Modifications made from original prototype
+Checkout Page:
+- We ultimately decided against creating an "offers section" to apply promotions along with removing the seperate page for the 
+promotions as we felt there was a way to simplify it and reduce clutter off the screen. We opted for having a popup displaying the
+available promotins and a section for manual entry of promo codes. This simplified our checkout page quite a bit.
+We also added the automatic calculation for fees and any added promotions in the same price breakdwon box.The delivery address also has a strict format for the map to properly work in the tracking page. EX: 1234 W Taylor St, Chicago, IL 60607.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Reviews Pages
+- The reviews page was modified when displaying all reviews for a particular restaraunt. The filter displays based on quantity of stars and not based on specifc food items as we have added a review section for each item individually. 
 
-## Available Scripts
+## How to run
+-npm start on computer
+-using mobile device on local network : type in link displayed in terminal
 
-In the project directory, you can run:
+References in no particualr order FIX:
+-https://dev.to/sofiajonsson/image-relative-path-in-react-3fci
+-https://stackoverflow.com/questions/37644265/correct-path-for-img-on-react-js
+-https://medium.com/techspace-usict/how-to-create-interactive-maps-in-react-js-ccdfad460fa0
+-https://www.youtube.com/watch?v=xMYo9jaMah8
+-https://legacy.reactjs.org/docs/handling-events.html
+-https://www.dhiwise.com/post/an-in-depth-look-at-react-gradient-backgrounds
+-https://codepen.io/marcobiedermann/pen/WNGWzYR
+-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+-https://nominatim.org/release-docs/develop/api/Search/
+-https://www.geeksforgeeks.org/how-to-create-popup-box-in-reactjs/
+-https://headlessui.com/react/tabs
+-https://headlessui.com/react/popover
+-https://blog.logrocket.com/adding-emojis-react-app/
+-https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
+-https://www.geeksforgeeks.org/how-to-use-container-component-in-reactjs/
+-https://codesandbox.io/p/sandbox/tab-filters-e1d8u
+-https://www.youtube.com/watch?v=N7rs5F4f6FA
+-Bootcamps and in class notes/assignments were incredibly helpful
 
-### `npm start`
+AI usage:
+We used AI for debugging purposes when we reached serious issues as we all had limited experince and knowledge with React. We used Claude as a resource to help guide us through the development process when debugging became an issue. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

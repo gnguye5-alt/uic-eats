@@ -6,7 +6,7 @@ import '../components/SharedStyles.css';
 import './CheckoutPage.css';
 import PromotionsModal from '../components/PromotionsModal';
 
-// UIC Campus locations
+// UIC locations available for pickup 
 const locationData = [
   {
     "name": "Student Center East",
@@ -49,15 +49,14 @@ const locationData = [
 const CheckoutPage = () => {
   const navigate = useNavigate();
   
-  // Get cart data from CartContext
+  // Get cart data from CartContext file
   const { 
     cart, 
-    currentRestaurantId, 
     currentRestaurantName,
     getCartTotals
   } = useContext(CartContext);
   
-  // Get promotions functionality
+  // Get promotions  opup functionality so they can be applied to orders
   const { 
     promotions,
     appliedPromotion, 
@@ -66,7 +65,7 @@ const CheckoutPage = () => {
     calculateDiscount 
   } = usePromotions();
   
-  // States for checkout page
+  // possible conditions for delivery -
   const [activeTab, setActiveTab] = useState('Delivery');
   const [selectedLocation, setSelectedLocation] = useState(locationData[0]);
   const [pickupText, setPickupText] = useState('Enter delivery address');
@@ -79,7 +78,8 @@ const CheckoutPage = () => {
   const [showPromotionsModal, setShowPromotionsModal] = useState(false);
   const [displayedPromoCode, setDisplayedPromoCode] = useState('');
   
-  // Calculate cart totals using CartContext
+  // Calculate cart totals using CartContext -- reffercing other file
+  // This will return subtotal, tax, and service fee
   const { subtotal, tax, serviceFee } = getCartTotals();
   
   // Set delivery fee based on active tab
@@ -125,14 +125,12 @@ const CheckoutPage = () => {
     // Get the promotion from the code
     const promotion = promotions.find(p => p.code === promoCode.trim());
     
-    // Check if this is a delivery promotion but we're not in delivery mode
+    // Check promotion validity , not applying a delivery code whenever there is no delivery selected
     if (promotion && promotion.type === 'free_delivery' && activeTab !== 'Delivery') {
       setPromoMessage('This promotion is only valid for delivery orders');
       return;
     }
-    
     setDisplayedPromoCode(promoCode.trim());
-    
     const result = applyPromotion(promoCode.trim());
     if (result.success) {
       setPromoMessage(`Applied: ${result.promotion.description}`);
@@ -141,9 +139,7 @@ const CheckoutPage = () => {
     }
   };
   
-  // Handle applying promo from modal
   const handleApplyPromoFromModal = (code) => {
-    // Get the promotion from the code
     const promotion = promotions.find(p => p.code === code);
     
     // Check if this is a delivery promotion but we're not in delivery mode
@@ -155,7 +151,6 @@ const CheckoutPage = () => {
     setPromoCode(code);
     setDisplayedPromoCode(code);
     const result = applyPromotion(code);
-    
     if (result.success) {
       setPromoMessage(`Applied: ${result.promotion.description}`);
     } else {
@@ -163,7 +158,7 @@ const CheckoutPage = () => {
     }
   };
   
-  // Tab click handler
+  // options tabs for delivery, pickup, or group delivery
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     if (tab === 'Delivery') {
@@ -183,7 +178,7 @@ const CheckoutPage = () => {
     }
   };
   
-  // Place order handler
+  // Place order , require items in cart before allowing to place an order 
   const handlePlaceOrder = () => {
     if (parseFloat(subtotal) === 0) {
       alert('Please add items to your cart before placing an order');
@@ -194,9 +189,7 @@ const CheckoutPage = () => {
       navigate('/view-post-group-order');
       return;
     }
-
     setProcessing(true);
-    
     localStorage.setItem('deliveryType', activeTab.toLowerCase());
 
     // Prepare location data based on delivery type
@@ -217,7 +210,7 @@ const CheckoutPage = () => {
       console.error("Error saving location to localStorage:", e);
     }
     
-    // Generate and save order number
+    // Generate and save order number , this a randomized number each time 
     const orderNum = Math.floor(100_000_000 + Math.random() * 900_000_000).toString();
     localStorage.setItem('orderNumber', orderNum);
     console.log("Generated order number:", orderNum);
@@ -225,16 +218,13 @@ const CheckoutPage = () => {
     // Simulate order processing
     setTimeout(() => {
       setProcessing(false);
-      
-      // Navigate directly to tracking page
-      console.log("Navigating to tracking page");
+            console.log("Navigating to tracking page");
       navigate('/track-order');
     }, 1500);
   };
 
-  // Function to get item image with proper fallbacks
   const getItemImage = (item) => {
-    // Simply return the image path if it exists
+    // this returns the image path if it exists, our paths are in the data files organized by restaurant 
     return item.image || 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"%3E%3Crect width="60" height="60" fill="%23f0f0f0"/%3E%3Cpath d="M30 15 L45 45 L15 45 Z" fill="%23ccc"/%3E%3C/svg%3E';
   };
   
@@ -272,9 +262,8 @@ const CheckoutPage = () => {
                         borderRadius: '4px'
                       }}
                       onError={(e) => {
-                        // If image fails to load, use a data URI placeholder
+                        // this handles the possible erro r of image not loading or not available 
                         e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"%3E%3Crect width="60" height="60" fill="%23f0f0f0"/%3E%3Cpath d="M15 15 L45 45 M45 15 L15 45" stroke="%23cccccc" stroke-width="2"/%3E%3C/svg%3E';
-                        // Remove the onError handler to prevent infinite loops
                         e.target.onError = null;
                       }}
                     />
@@ -412,7 +401,7 @@ const CheckoutPage = () => {
         </div>
       </div>
       
-      {/* Place Order Button */}
+      {/* Place Order Button using conc */}
       <button 
         className="place-order-button" 
         onClick={handlePlaceOrder}

@@ -5,11 +5,11 @@ promotions as we felt there was a way to simplify it and reduce clutter off the 
 available promotins and a section for manual entry of promo codes. This simplified our checkout page quite a bit.
 We also added the automatic calculation for fees and any added promotions in the same price breakdwon box.The delivery address also has a strict format for the map to properly work in the tracking page. EX: 1234 W Taylor St, Chicago, IL 60607.
 
-Reviews Pages
+Reviews Pages:
 - The reviews page was modified when displaying all reviews for a particular restaraunt. The filter displays based on quantity of stars and not based on specifc food items as we have added a review section for each item individually. 
 
-Active Group Orders:
-- The active group orders have been removed from the original landing page.
+Landing Page:
+- The active group orders have been removed from the original landing page. When users want to place a group order they will simply click on the group order button on the top right corner of the landing page.
 
 ## How to run
 In the project directory, you can run:

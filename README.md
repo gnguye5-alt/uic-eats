@@ -18,7 +18,7 @@ If you're testing on your phone, copy the local server URL (e.g., http://192.168
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-References in no particualr order FIX:
+References in no particualr order:
 -https://dev.to/sofiajonsson/image-relative-path-in-react-3fci
 -https://stackoverflow.com/questions/37644265/correct-path-for-img-on-react-js
 -https://medium.com/techspace-usict/how-to-create-interactive-maps-in-react-js-ccdfad460fa0
